@@ -29,7 +29,7 @@ function setMenuHeight() {
   $("#sidebar .highlightable").height(
     $("#sidebar").innerHeight() - $("#header-wrapper").height() - 40,
   );
-  $("#sidebar .highlightable").perfectScrollbar("update");
+  $("#sidebar .highlightable").perfectScrollbar("up.Date");
 }
 
 function fallbackMessage(action) {

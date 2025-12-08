@@ -1,59 +1,38 @@
 ---
 title: "Worklog Tuần 9"
-date: "`r Sys.Date()`"
+.Date: "`r Sys..Date()`"
 weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu cơ bản về AWS Bedrock và GenAI trên AWS.
+* Nắm các Foundation Models: Claude, Llama, Titan, Mistral.
+* Biết cách gọi Bedrock bằng Console và AWS SDK.
+* Hiểu embedding & quy trình RAG đơn giản.
+* Học nền tảng về AWS Lambda và các trigger phổ biến.
+* Tạo một demo nhỏ dùng Lambda + Bedrock.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Giới thiệu AWS Bedrock. <br> - Xem danh sách Foundation Models. <br> - Thử tạo văn bản bằng Bedrock Console.                                                                                                  | 02/11/2025 | 03/11/2025      |
+| 3   | - Thực hành gọi API Bedrock bằng AWS SDK: <br>&emsp; + Gọi API sinh văn bản. <br>&emsp; + Hiểu token pricing. <br>&emsp; + Tạo IAM Role để sử dụng Bedrock.                                          | 03/11/2025 | 04/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Học về embedding & RAG cơ bản: <br>&emsp; + Embedding là gì? <br>&emsp; + Tạo embedding bằng Titan. <br>&emsp; + Xây một pipeline RAG nhỏ | 04/11/2025 | 05/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Giới thiệu AWS Lambda: <br>&emsp; + Khái niệm serverless. <br>&emsp; + Tạo Lambda function đầu tiên. <br>&emsp; + Test bằng “Invoke”.| 05/11/2025 | 06/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Thực hành với Lambda: <br>&emsp; + Lambda triggers: API Gateway, S3, EventBridge. <br>&emsp; + Deploy version mới của Lambda. <br>&emsp; + Giới thiệu networking khi Lambda nằm trong VPC. networking.                                                                                     | 06/11/2025 | 07/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hiểu rõ cách hoạt động của AWS Bedrock và sử dụng nhiều foundation model.
+* Thực hành gọi API Bedrock bằng SDK + IAM Role.
+* Nắm được embedding và xây 1 pipeline RAG nhỏ.
+* Tạo và test Lambda function với nhiều trigger.
+* Tự tin kết hợp Lambda + Bedrock để tạo ứng dụng AI serverless cơ bản.
 
 

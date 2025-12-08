@@ -1,126 +1,95 @@
 ---
 title: "Event 2"
-date: "`r Sys.Date()`"
+.Date: "`r Sys..Date()`"
 weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+
+# Summary Report: “BUILDING AGENTIC AI Context Optimization with Amazon Bedrock”
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Technical deep-dive into Amazon Bedrock's agent capabilities, covering core concepts, architecture, and key features for building AI agents on AWS.
+- Real-world use case presentation by Diaflow's CEO, showcasing practical implementation of agentic workflows using AWS services.
+- Brief company overview and product introduction by CloudThinker's co-founder, highlighting their AI orchestration platform.
+- Advanced-level (L300) technical session exploring CloudThinker's orchestration framework and context optimization techniques on Amazon Bedrock.
+- Interactive coding workshop with CloudThinker engineers, focusing on practical implementations.
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Kien Nguyen** - Solutions Architect Amazon Web Services
+- **Viet Pham** -Founder cum CEO Diaflow
+- **Thang Ton** - Co-founder & COO CloudThinker
+- **Henry Bui** - Head of Engineering CloudThinker
+- **Kha Van** - Community Leader Amazon Web Services
+
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+#### 1. Deep Dive: Amazon Bedrock Agents
+The session began with an in-depth analysis of **Amazon Bedrock Agents**, marking the shift from passive LLM usage to proactive AI Agents.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+* **Core Concepts:** Agents go beyond answering queries; they possess planning capabilities and can utilize tools to achieve objectives.
+* **Architecture:**
+    * Connects Foundation Models (FMs) with enterprise data sources and APIs.
+    * Utilizes "Chain-of-Thought" reasoning to decompose complex user requests into executable steps.
+* **Key Features:**
+    * Memory management to maintain conversational context.
+    * Integrated Retrieval-Augmented Generation (RAG).
+    * Tracing capabilities to monitor agent reasoning for debugging and optimization.
 
-#### Transitioning to modern application architecture – Microservices
+---
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### 2. Real-World Case Study: Diaflow
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+A presentation showcasing how **Diaflow** implemented "Agentic Workflows" in a production environment:
+* **Implementation:** Leveraged AWS services to build automated workflows where Agents act as virtual employees handling specific tasks.
+* **Key Takeaways:** Insights into overcoming challenges when deploying Agents to production, focusing on reliability and accuracy in real-world scenarios.
 
-#### Domain-Driven Design (DDD)
+---
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+#### 3. AI Orchestration Solution: CloudThinker Overview
 
-#### Event-Driven Architecture
+An introduction to **CloudThinker** and the critical role of an Orchestration Platform in the AI ecosystem:
+* **The Challenge:** Managing multiple models and agents becomes increasingly difficult as AI systems grow in complexity.
+* **The Solution:** CloudThinker provides an orchestration layer to manage, monitor, and optimize interactions between AI components, allowing businesses to focus on logic rather than infrastructure.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+---
 
-#### Compute Evolution
+#### 4. Advanced Technical Session (L300): Orchestration & Context Optimization
+An advanced technical deep dive (Level 300) exploring the integration of CloudThinker with Amazon Bedrock:
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+* **Orchestration Framework:**
+    * Designing systems for multi-agent collaboration.
+    * Intelligent routing logic to direct tasks to the appropriate specialized Agent.
+* **Context Optimization:**
+    * Techniques for managing LLM Context Windows on Bedrock.
+    * Strategies for selecting critical information for prompts to reduce token costs and improve response accuracy.
 
-#### Amazon Q Developer
+---
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+#### 5. Workshop: Interactive Coding
 
-### Key Takeaways
+A hands-on session focused on practical implementation:
+* **Activity:** Coding to integrate CloudThinker’s framework with Amazon Bedrock.
+* **Outcome:** Successfully built a basic Agent workflow, covering request handling, context processing, and API execution.
 
-#### Design Mindset
+---
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+#### 6. Conclusion
+The event highlighted critical directions for modern AI application development:
+1.  **Agentic AI is the future:** Moving from Q&A Chatbots to Action-Oriented Agents.
+2.  **Orchestration is essential:** Robust orchestration layers (like CloudThinker) are necessary to manage complex AI systems.
+3.  **Optimization is key:** Effective context management on Bedrock directly impacts project performance and cost efficiency.  
 
 #### Some event photos
-*Add your event photos here*  
+![evt_4](/images/evt_4.jpg)
+
+![evt_5](/images/evt_5.jpg)
+
+![evt_6](/images/evt_6.jpg)
 
 > Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.

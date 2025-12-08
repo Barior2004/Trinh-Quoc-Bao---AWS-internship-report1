@@ -1,5 +1,5 @@
 ---
-date: 2016-04-09T16:50:16+02:00
+.Date: 2016-04-09T16:50:16+02:00
 title: Personnalisation du style
 weight: 25
 ---
@@ -118,9 +118,9 @@ input[type="tel"]:focus,
 input[type="text"]:focus,
 input[type="url"]:focus,
 input[type="color"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
+input[type=".Date"]:focus,
+input[type=".Datetime"]:focus,
+input[type=".Datetime-local"]:focus,
 input[type="month"]:focus,
 input[type="time"]:focus,
 input[type="week"]:focus,

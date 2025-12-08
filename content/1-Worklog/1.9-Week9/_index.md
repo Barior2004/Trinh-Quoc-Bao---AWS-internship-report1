@@ -1,57 +1,36 @@
 ---
 title: "Week 9 Worklog"
-date: "`r Sys.Date()`"
+.Date: "`r Sys..Date()`"
 weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn the fundamentals of AWS Bedrock and generative AI on AWS.
+* Understand different Foundation Models (Claude, Llama, Titan, Mistral).
+* Learn how to call Bedrock using the AWS Console & SDK.
+* Understand basic concepts of embeddings & RAG workflow.
+* Learn the basics of AWS Lambda and how to trigger functions.
+* Build a simple serverless combining Lambda + Bedrock for proposal
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
+| Day | Task                                                                                                                                                                                                   | Start .Date | Completion .Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Introduction to AWS Bedrock. <br> - Explore available Foundation Models. <br> - Try generating text using Bedrock Console.                                                                                                  | 02/11/2025 | 03/11/2025      |
+| 3   | - Practice calling Bedrock via AWS SDK (Python or Node): <br>&emsp; + Simple text-generation API call. <br>&emsp; + Understand pricing <br>&emsp; + Set up IAM Role for Bedrock access.                                          | 03/11/2025 | 04/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Learn embeddings & RAG basics: <br>&emsp; + What is embedding? <br>&emsp; + Generate Titan Embeddings. <br>&emsp; + Build a small RAG pipeline | 04/11/2025 | 05/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Introduction to AWS Lambda: <br>&emsp; + What is serverless? <br>&emsp; + Create first Lambda function. <br>&emsp; + Test using “Invoke” on Console.| 05/11/2025 | 06/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Hands-on with Lambda: <br>&emsp; + Lambda triggers: API Gateway, S3, EventBridge. <br>&emsp; + Deploy new Lambda versions. <br>&emsp; + Intro to Lambda VPC networking.                                                                                     | 06/11/2025 | 07/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 9 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Understood AWS Bedrock fundamentals and tried multiple foundation models.
+* Practiced calling Bedrock through SDK with IAM permissions.
+* Learned embedding concepts and built a mini RAG flow.
+* Built and tested Lambda functions with different triggers.
+* Gained confidence combining Lambda + Bedrock for basic serverless AI workloads.

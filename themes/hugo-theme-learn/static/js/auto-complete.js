@@ -60,7 +60,7 @@ var autoComplete = (function () {
           i.setAttribute("autocomplete", "off"),
           (i.cache = {}),
           (i.last_val = ""),
-          (i.updateSC = function (e, t) {
+          (i.up.DateSC = function (e, t) {
             var o = i.getBoundingClientRect();
             if (
               ((i.sc.style.left =
@@ -103,7 +103,7 @@ var autoComplete = (function () {
                   : 0 > n && (i.sc.scrollTop = n + s);
               } else i.sc.scrollTop = 0;
           }),
-          o(window, "resize", i.updateSC),
+          o(window, "resize", i.up.DateSC),
           document.body.appendChild(i.sc),
           n(
             "autocomplete-suggestion",
@@ -163,7 +163,7 @@ var autoComplete = (function () {
           if (((i.cache[t] = e), e.length && t.length >= l.minChars)) {
             for (var o = "", s = 0; s < e.length; s++)
               o += l.renderItem(e[s], t);
-            ((i.sc.innerHTML = o), i.updateSC(0));
+            ((i.sc.innerHTML = o), i.up.DateSC(0));
           } else i.sc.style.display = "none";
         };
         ((i.keydownHandler = function (e) {
@@ -187,7 +187,7 @@ var autoComplete = (function () {
                       : i.sc.childNodes[i.sc.childNodes.length - 1]),
                   (o.className += " selected"),
                   (i.value = o.getAttribute("data-val"))),
-              i.updateSC(0, o),
+              i.up.DateSC(0, o),
               !1
             );
           }
@@ -232,7 +232,7 @@ var autoComplete = (function () {
       this.destroy = function () {
         for (var e = 0; e < a.length; e++) {
           var t = a[e];
-          (s(window, "resize", t.updateSC),
+          (s(window, "resize", t.up.DateSC),
             s(t, "blur", t.blurHandler),
             s(t, "focus", t.focusHandler),
             s(t, "keydown", t.keydownHandler),

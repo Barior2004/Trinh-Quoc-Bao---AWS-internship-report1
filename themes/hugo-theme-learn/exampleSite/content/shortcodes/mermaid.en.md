@@ -119,7 +119,7 @@ sequenceDiagram
 
     {{</*mermaid*/>}}
     gantt
-            dateFormat  YYYY-MM-DD
+            .DateFormat  YYYY-MM-DD
             title Adding GANTT diagram functionality to mermaid
             section A section
             Completed task            :done,    des1, 2014-01-06,2014-01-08
@@ -139,7 +139,7 @@ renders as
 
 {{<mermaid>}}
 gantt
-dateFormat YYYY-MM-DD
+.DateFormat YYYY-MM-DD
 title Adding GANTT diagram functionality to mermaid
 section A section
 Completed task :done, des1, 2014-01-06,2014-01-08
@@ -160,7 +160,7 @@ or you can use this alternative syntax:
 <pre>
 ```mermaid
 gantt
-        dateFormat  YYYY-MM-DD
+        .DateFormat  YYYY-MM-DD
         title Adding GANTT diagram functionality to mermaid
         section A section
         Completed task            :done,    des1, 2014-01-06,2014-01-08
@@ -181,7 +181,7 @@ renders as
 
 ```mermaid
 gantt
-        dateFormat  YYYY-MM-DD
+        .DateFormat  YYYY-MM-DD
         title Adding GANTT diagram functionality to mermaid
         section A section
         Completed task            :done,    des1, 2014-01-06,2014-01-08

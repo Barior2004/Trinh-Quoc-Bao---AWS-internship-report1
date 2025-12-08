@@ -1,59 +1,37 @@
 ---
 title: "Worklog Tuần 8"
-date: "`r Sys.Date()`"
+.Date: "`r Sys..Date()`"
 weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu khái niệm Data Lake trên AWS.
+* Nắm vai trò của Amazon S3 trong việc xây dựng Data Lake.
+* Tìm hiểu các dịch vụ dùng chung với Data Lake: Glue, Lake Formation, Athena.
+* Hiểu cơ bản về Amazon DynamoDB và mô hình NoSQL.
+* Thực hành đơn giản với S3, Athena, và DynamoDB.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Tìm hiểu Data Lake là gì và lý do doanh nghiệp sử dụng. <br> - Hiểu S3 là lớp lưu trữ chính cho Data Lake. <br> -Tìm hiểu kiến trúc Data Lake architecture                                                                                                  | 26/10/2025 | 27/10/2025      |<https://000035.awsstudygroup.com/>
+| 3   | - Thực hành Data Lake : <br>&emsp; + Tạo S3 bucket cho raw & processed. <br>&emsp; + Upload dữ liệu mẫu CSV/JSON . <br>&emsp; + Query dữ liệu bằng Amazon Athena.                                              | 27/10/2025 | 28/10/2025      | <https://000035.awsstudygroup.com/> |
+| 4   | - Tìm hiểu AWS Glue & Lake Formation <br>&emsp; + Glue Data Catalog basics. <br>&emsp; + Crawler tự nhận diện schema. <br>&emsp; + Tổng quan ETL. | 28/10/2025 | 29/10/2025      | <https://000035.awsstudygroup.com/> |
+| 5   | - Tìm hiểu DynamoDB: <br>&emsp; + So sánh NoSQL và SQL. <br>&emsp; + Partition key, Sort key. <br>&emsp; + Read/Write Capacity Modes                            | 29/10/2025 | 30/10/2025      | <https://000039.awsstudygroup.com/> |
+| 6   | - Thực hành với DynamoDB: <br>&emsp; + Tạo table với partition key và sort key. <br>&emsp; + Thêm, sửa, xoá record. <br>&emsp; + Thực hiện Query & Scan.                                                                                     | 30/10/2025 | 31/10/2025      | <https://000039.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hiểu rõ cơ bản về Data Lake và vai trò của S3.
+* Biết cách query dữ liệu trong S3 bằng Athena.
+* Nắm được Glue & Lake Formation ở mức nền tảng.
+* Có kiến thức vững về DynamoDB và NoSQL.
+* Tự tạo và thao tác thành công một DynamoDB table.
 
 

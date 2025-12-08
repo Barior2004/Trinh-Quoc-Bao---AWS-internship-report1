@@ -1,59 +1,58 @@
 ---
 title: "Worklog Tuần 3"
-date: "`r Sys.Date()`"
+.Date: "`r Sys..Date()`"
 weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu sâu hơn về dịch vụ EC2 và S3.
+* Biết cách tạo EC2 instance phục vụ cho việc cấu hình Storage Gateway.
+* Tìm hiểu và thực hành CloudFront để phân phối nội dung toàn cầu.
+* Tìm hiểu tính năng Replication Multi-Region trong S3 để đảm bảo tính sẵn sàng và dự phòng dữ liệu.
+* Rèn luyện kỹ năng quản lý tài nguyên AWS trên cả Console và CLI.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Ôn lại các khái niệm EC2: Instance type, AMI, Key Pair, Security Group, EBS. <br> - Tìm hiểu EBS Volume và Snapshot, cách tạo, attach và detach volume.                                                                                             | 21/09/2025   | 22/09/2025      |
+| 3   | - Tìm hiểu tổng quan về Amazon S3 (Simple Storage Service). <br> - Nắm rõ các khái niệm: Bucket, Object, Region, Versioning, Storage Class. <br>- **Thực hành:** <br>&emsp; + Tạo một S3 Bucket. <br>&emsp; + Upload/Download file qua AWS Console. <br>&emsp; + Bật Versioning để lưu lại lịch sử thay đổi dữ liệu.<br>                                            | 22/09/2025   | 23/09/2025      | <https://000057.awsstudygroup.com/vi/> |
+| 4   | - Tìm hiểu AWS Storage Gateway <br> - Phân biệt 3 loại Gateway: File, Volume, Tape. <br> - **Thực hành:** <br>&emsp; + Tạo EC2 instance để chạy Storage Gateway. <br>&emsp; + Cấu hình Storage Gateway trong AWS Console. <br> &emsp; + Kết nối với S3 để đồng bộ dữ liệu. | 23/09/2025   | 24/09/2025      | <https://000024.awsstudygroup.com/vi/> |
+| 5   | - Tìm hiểu AWS CloudFront: <br> - Hiểu cơ chế hoạt động của Edge Locations và Distribution.<br> - **Thực hành**: <br>&emsp; + Tạo CloudFront Distribution sử dụng dữ liệu từ S3 Bucket.<br>&emsp; + Kiểm tra tốc độ truy cập từ nhiều khu vực.                   | 24/09/2025   | 25/09/2025      | <https://000057.awsstudygroup.com/vi/> |
+| 6   | - Tìm hiểu về Cross-Region Replication (CRR) trong S3. <br> - **Thực hành**: <br>&emsp; + Tạo 2 bucket ở 2 region khác nhau (ví dụ: Singapore và Tokyo). <br>&emsp; + Kích hoạt CRR giữa 2 bucket. <br>&emsp; + Upload file và kiểm tra dữ liệu tự động replicate.                                                                                      | 25/09/2025   | 26/09/2025      | <https://000057.awsstudygroup.com/vi/> |
 
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu rõ mối liên kết giữa EC2 – S3 – Storage Gateway – CloudFront.
+* Tự tạo và quản lý EC2 instance phục vụ các mục đích khác nhau.
+* Thành thạo việc tạo, upload, quản lý dữ liệu trong S3.
+* Biết cách triển khai Storage Gateway để đồng bộ dữ liệu giữa on-premises và AWS.
+* Tạo và cấu hình CloudFront Distribution để tối ưu tốc độ phân phối nội dung.
+* Thiết lập thành công Cross-Region Replication trong S3 để đảm bảo tính sẵn sàng dữ liệu trên nhiều vùng.
+* Nâng cao kỹ năng thao tác song song trên AWS Console và CLI.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Thực hành với Amazon S3
+  * Tạo bucket đầu tiên: my-first-s3-demo.
+  * Upload file (ảnh, text, csv) và kiểm tra đường dẫn công khai.
+  * Thiết lập quyền truy cập Public/Private, bật Versioning để quản lý thay đổi của file.
+  * Tạo Bucket Policy để chỉ cho phép truy cập từ tài khoản cụ thể.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thực hành Cross-Region Replication (CRR)
+  * Tạo hai bucket:
+    * my-bucket-sg (region: Singapore)
+    * my-bucket-tokyo (region: Tokyo)
+  * Bật Cross-Region Replication giữa hai bucket.
+  * Upload file lên my-bucket-sg, kiểm tra file tự động được replicate sang my-bucket-tokyo.
+  * Hiểu rõ quy trình replicate object đa vùng giúp tăng độ tin cậy và sẵn sàng cho dữ liệu.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Thực hành EC2 cho Storage Gateway
+  * Tạo EC2 Instance (Amazon Linux 2 – t2.micro) để cài đặt Storage Gateway.
+  * Cấu hình:
+    * Gắn Elastic IP để truy cập ổn định.
+    * Mở các cổng cần thiết: 80, 443, 3260.
+    * Cài đặt Storage Gateway Appliance trên EC2.
+  * Kết nối EC2 với AWS Storage Gateway Console, chọn loại File Gateway.
+  * Tạo File Share liên kết với S3 bucket đã có.
+  * Kiểm tra hoạt động đọc/ghi dữ liệu từ Gateway tới S3.

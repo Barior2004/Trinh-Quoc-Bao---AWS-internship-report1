@@ -28,7 +28,7 @@ This theme is a partial porting of the [Learn theme](http://learn.getgrav.org/) 
 
 ## Contribute to this documentation
 
-Feel free to update this content, just click the **Edit this page** link displayed on top right of each page, and pullrequest it
+Feel free to up.Date this content, just click the **Edit this page** link displayed on top right of each page, and pullrequest it
 
 {{% notice info %}}
 Your modification will be deployed automatically when merged.

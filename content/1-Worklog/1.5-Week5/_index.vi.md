@@ -1,59 +1,37 @@
 ---
 title: "Worklog Tuần 5"
-date: "`r Sys.Date()`"
+.Date: "`r Sys..Date()`"
 weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu rõ dịch vụ AWS Security Hub và cách nó tổng hợp các phát hiện bảo mật từ nhiều nguồn.
+* Biết cách kích hoạt, cấu hình và phân tích các tiêu chuẩn bảo mật (CIS, PCI-DSS, AWS Foundational Best Practices).
+* Hiểu AWS Key Management Service (KMS), các cơ chế mã hóa, key policy, CMK và các tình huống sử dụng thực tế.
+* Thực hành tạo, quản lý và xoay vòng (rotation) khóa KMS.
+* Tìm hiểu AWS Identity Center, bao gồm Permission Sets, nguồn danh tính (Identity Sources) và cách quản lý người dùng/nhóm.
+* Nâng cao kỹ năng triển khai các dịch vụ bảo mật thông qua cả AWS Console và AWS CLI.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Tìm hiểu AWS Security Hub: <br>&emsp; + Security Hub dùng để làm gì, tổng hợp phát hiện ra sao.. <br>&emsp; +Khái niệm Insights, Findings và các tích hợp                                                                                                    | 05/10/2025 | 06/10/2025      | <https://000018.awsstudygroup.com/2-enable-sec-hub/>
+| 3   | - Thực hành với Security Hub: <br>&emsp; + Bật CIS standard và phân tích những control failed phổ biến. <br>&emsp; + Xem và phân tích Findings chi tiết. <br>&emsp; + Phân biệt Security Hub – GuardDuty – Inspector <br>                                              | 06/10/2025 | 07/10/2025      | <https://000018.awsstudygroup.com/2-enable-sec-hub/> |
+| 4   | - Tìm hiểu AWS Key Management Service (KMS): <br>&emsp; + Khái niệm CMK, khóa đối xứng / bất đối xứng. <br>&emsp; + Cách hoạt động của Key Policy và quyền IAM. <br>&emsp; + Envelope Encryption & cách các dịch vụ AWS dùng KMS.  | 07/10/2025 | 08/10/2025      | <https://000033.awsstudygroup.com/> |
+| 5   | - Thực hành với KMS: <br>&emsp; + Mã hóa / giải mã dữ liệu bằng AWS CLI. <br>&emsp; + Tích hợp KMS với S3, EBS, RDS, Lambda environment variables. <br>&emsp; + Bật Key Rotation. <br>&emsp; + Kiểm thử disable key & schedule key deletion.
+ deletion.                            | 08/10/2025 | 09/10/2025      | <https://000033.awsstudygroup.com/> |
+| 6   | - Tìm hiểu & thực hành AWS Identity Center: <br>&emsp; + Hiểu về identity sources <br>&emsp; + Learn Permission Sets <br>&emsp; + Gán người dùng/nhóm vào các tài khoản AWS. <br>&emsp; +Kiểm thử quy trình đăng nhập và chuyển đổi role.                                                                               | 09/10/2025 | 10/10/2025      | <https://000012.awsstudygroup.com/vi/> |
 
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hiểu rõ cách hoạt động của AWS Security Hub và các tiêu chuẩn bảo mật trong AWS.
+* Đã bật và cấu hình thành công Security Hub
+* Hiểu được vai trò của KMS trong việc mã hóa dữ liệu trên các dịch vụ AWS
+* Rèn luyện kỹ năng trong AWS Identity Center: quản lý người dùng, nhóm, bộ quyền và quyền truy cập liên tài khoản.
+* Cải thiện kiến ​​thức tổng thể về các biện pháp bảo mật tốt nhất của AWS.
 
 

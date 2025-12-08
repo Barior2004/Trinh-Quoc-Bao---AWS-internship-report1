@@ -38,13 +38,13 @@
 - [**bug**] Fix issue where "children" shortcode only shows top level. [#252](https://github.com/matcornic/hugo-theme-learn/pull/252)
 - [**bug**] Fix translation when using a custom baseURL [#234](https://github.com/matcornic/hugo-theme-learn/pull/234)
 - [**bug**] Preventing left/right arrow key navigation in textareas [#241](https://github.com/matcornic/hugo-theme-learn/pull/241)
-- [**bug**] Update menu.html to include the check icon [#229](https://github.com/matcornic/hugo-theme-learn/pull/229)
+- [**bug**] Up.Date menu.html to include the check icon [#229](https://github.com/matcornic/hugo-theme-learn/pull/229)
 
 #### Enhancements
 
 - [**enhancement**] Render the ```mermaid blocks into graphs [#226](https://github.com/matcornic/hugo-theme-learn/pull/226)
-- [**enhancement**] Remove oudated versions of jquery & modernizr libraries [#259](https://github.com/matcornic/hugo-theme-learn/pull/259)
-- [**enhancement**] Various Updates [#237](https://github.com/matcornic/hugo-theme-learn/pull/237)
+- [**enhancement**] Remove ou.Dated versions of jquery & modernizr libraries [#259](https://github.com/matcornic/hugo-theme-learn/pull/259)
+- [**enhancement**] Various Up.Dates [#237](https://github.com/matcornic/hugo-theme-learn/pull/237)
 - [**enhancement**] Use style instead of width and height in logo [#250](https://github.com/matcornic/hugo-theme-learn/pull/250)
 - [**enhancement**] [ImgBot] Optimize images [#222](https://github.com/matcornic/hugo-theme-learn/pull/222)
 - [**enhancement**] remove duplicate icon and fix incorrect favicon type [#227](https://github.com/matcornic/hugo-theme-learn/pull/227)
@@ -69,7 +69,7 @@
 #### Bug Fixes
 
 - [**bug**] Fix baseurl used by search to load json data [#177](https://github.com/matcornic/hugo-theme-learn/pull/177)
-- [**bug**] Updated CSS link to fontawesome library [#186](https://github.com/matcornic/hugo-theme-learn/pull/186)
+- [**bug**] Up.Dated CSS link to fontawesome library [#186](https://github.com/matcornic/hugo-theme-learn/pull/186)
 - [**bug**] Close / Cancel search icon not showing in input box [#215](https://github.com/matcornic/hugo-theme-learn/pull/215)
 - [**bug**] Prevent left and right keydown events while in input fields [#219](https://github.com/matcornic/hugo-theme-learn/pull/219)
 - [**bug**] xss fix [#182](https://github.com/matcornic/hugo-theme-learn/pull/182)
@@ -77,16 +77,16 @@
 
 #### Enhancements
 
-- [**enhancement**] Update mermaid.js to a499296 [#199](https://github.com/matcornic/hugo-theme-learn/pull/199)
-- [**enhancement**] Update Font Awesome to 5.0.6 [#129](https://github.com/matcornic/hugo-theme-learn/pull/129)
-- [**enhancement**] Update 404.html alttext [#161](https://github.com/matcornic/hugo-theme-learn/pull/161)
+- [**enhancement**] Up.Date mermaid.js to a499296 [#199](https://github.com/matcornic/hugo-theme-learn/pull/199)
+- [**enhancement**] Up.Date Font Awesome to 5.0.6 [#129](https://github.com/matcornic/hugo-theme-learn/pull/129)
+- [**enhancement**] Up.Date 404.html alttext [#161](https://github.com/matcornic/hugo-theme-learn/pull/161)
 - [**enhancement**] Remove CSS source map metadata [#167](https://github.com/matcornic/hugo-theme-learn/pull/167)
 - [**enhancement**] Load github images in examplesite via https instead of http [#180](https://github.com/matcornic/hugo-theme-learn/pull/180)
 - [**enhancement**] Load main site logo via BaseUrl [#185](https://github.com/matcornic/hugo-theme-learn/pull/185)
 - [**enhancement**] HTTPS links in examplesite sidebar [#200](https://github.com/matcornic/hugo-theme-learn/pull/200)
 - [**enhancement**] Use correct input type for search [#205](https://github.com/matcornic/hugo-theme-learn/pull/205)
 - [**enhancement**] HTTPS link to learn.getgrav.org [#207](https://github.com/matcornic/hugo-theme-learn/pull/207)
-- [**enhancement**] Update html5shiv-printshiv.min.js [#208](https://github.com/matcornic/hugo-theme-learn/pull/208)
+- [**enhancement**] Up.Date html5shiv-printshiv.min.js [#208](https://github.com/matcornic/hugo-theme-learn/pull/208)
 - [**enhancement**] Remove whitespace from clippy.svg [#211](https://github.com/matcornic/hugo-theme-learn/pull/211)
 - [**enhancement**] Upgrade fontawesome to 5.6.3 [#218](https://github.com/matcornic/hugo-theme-learn/pull/218)
 - [**enhancement**] fix clickable nodes style in mermaid [#169](https://github.com/matcornic/hugo-theme-learn/pull/169)
@@ -110,7 +110,7 @@
 #### Internationalisation
 
 - [**i18n**] Clean up the English language phrasing [#146](https://github.com/matcornic/hugo-theme-learn/pull/146)
-- [**i18n**] Updated \_index.en.md for typo "names" [#150](https://github.com/matcornic/hugo-theme-learn/pull/150)
+- [**i18n**] Up.Dated \_index.en.md for typo "names" [#150](https://github.com/matcornic/hugo-theme-learn/pull/150)
 
 #### Theme Meta
 

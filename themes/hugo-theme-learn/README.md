@@ -79,8 +79,8 @@ Somewhat work-in-progress steps to release with [gren](https://github.com/github
   gren changelog  --override --generate --tags=all
   ```
 
-- Fix the date for the current release in CHANGELOG.md
-- Add the changelog to git and update the tag
+- Fix the .Date for the current release in CHANGELOG.md
+- Add the changelog to git and up.Date the tag
 
   ```shell
   git add CHANGELOG.md

@@ -77,8 +77,8 @@
           }
           function c(t) {
             return (
-              t instanceof Date ||
-              "[object Date]" === Object.prototype.toString.call(t)
+              t instanceof .Date ||
+              "[object .Date]" === Object.prototype.toString.call(t)
             );
           }
           function l(t, e) {
@@ -113,9 +113,9 @@
                   nullInput: !1,
                   invalidMonth: null,
                   invalidFormat: !1,
-                  userInvalidated: !1,
+                  userInvali.Dated: !1,
                   iso: !1,
-                  parsedDateParts: [],
+                  parsed.DateParts: [],
                   meridiem: null,
                   rfc2822: !1,
                   weekdayMismatch: !1,
@@ -126,7 +126,7 @@
           function p(t) {
             if (null == t._isValid) {
               var e = _(t),
-                n = r.call(e.parsedDateParts, function (t) {
+                n = r.call(e.parsed.DateParts, function (t) {
                   return null != t;
                 }),
                 i =
@@ -138,7 +138,7 @@
                   !e.weekdayMismatch &&
                   !e.nullInput &&
                   !e.invalidFormat &&
-                  !e.userInvalidated &&
+                  !e.userInvali.Dated &&
                   (!e.meridiem || (e.meridiem && n));
               if (
                 (t._strict &&
@@ -156,7 +156,7 @@
           }
           function m(t) {
             var e = h(NaN);
-            return (null != t ? f(_(e), t) : (_(e).userInvalidated = !0), e);
+            return (null != t ? f(_(e), t) : (_(e).userInvali.Dated = !0), e);
           }
           r = Array.prototype.some
             ? Array.prototype.some
@@ -193,9 +193,9 @@
           var v = !1;
           function M(t) {
             (g(this, t),
-              (this._d = new Date(null != t._d ? t._d.getTime() : NaN)),
-              this.isValid() || (this._d = new Date(NaN)),
-              !1 === v && ((v = !0), i.updateOffset(this), (v = !1)));
+              (this._d = new .Date(null != t._d ? t._d.getTime() : NaN)),
+              this.isValid() || (this._d = new .Date(NaN)),
+              !1 === v && ((v = !0), i.up.DateOffset(this), (v = !1)));
           }
           function b(t) {
             return t instanceof M || (null != t && null != t._isAMomentObject);
@@ -363,12 +363,12 @@
                     };
                   })(e)),
                 z[e](t))
-              : t.localeData().invalidDate();
+              : t.localeData().invalid.Date();
           }
           function V(t, e) {
             var n = 5;
             function r(t) {
-              return e.longDateFormat(t) || t;
+              return e.long.DateFormat(t) || t;
             }
             for (I.lastIndex = 0; n >= 0 && I.test(t); )
               ((t = t.replace(I, r)), (I.lastIndex = 0), (n -= 1));
@@ -492,7 +492,7 @@
           function Et(t, e) {
             return function (n) {
               return null != n
-                ? (Ct(this, t, n), i.updateOffset(this, e), this)
+                ? (Ct(this, t, n), i.up.DateOffset(this, e), this)
                 : At(this, t);
             };
           }
@@ -507,7 +507,7 @@
               ("FullYear" === e &&
               Yt(t.year()) &&
               1 === t.month() &&
-              29 === t.date()
+              29 === t..Date()
                 ? t._d["set" + (t._isUTC ? "UTC" : "") + e](
                     n,
                     t.month(),
@@ -570,14 +570,14 @@
               if (/^\d+$/.test(e)) e = L(e);
               else if (!u((e = t.localeData().monthsParse(e)))) return t;
             return (
-              (n = Math.min(t.date(), jt(t.year(), e))),
+              (n = Math.min(t..Date(), jt(t.year(), e))),
               t._d["set" + (t._isUTC ? "UTC" : "") + "Month"](e, n),
               t
             );
           }
           function Nt(t) {
             return null != t
-              ? (Ft(this, t), i.updateOffset(this, !0), this)
+              ? (Ft(this, t), i.up.DateOffset(this, !0), this)
               : At(this, "Month");
           }
           var Bt = ut,
@@ -612,7 +612,7 @@
               )));
           }
           function zt(t) {
-            var e = new Date(Date.UTC.apply(null, arguments));
+            var e = new .Date(.Date.UTC.apply(null, arguments));
             return (
               t < 100 &&
                 t >= 0 &&
@@ -863,7 +863,7 @@
                 lastWeek: "[Last] dddd [at] LT",
                 sameElse: "L",
               },
-              longDateFormat: {
+              long.DateFormat: {
                 LTS: "h:mm:ss A",
                 LT: "h:mm A",
                 L: "MM/DD/YYYY",
@@ -871,7 +871,7 @@
                 LLL: "MMMM D, YYYY h:mm A",
                 LLLL: "dddd, MMMM D, YYYY h:mm A",
               },
-              invalidDate: "Invalid date",
+              invalid.Date: "Invalid .Date",
               ordinal: "%d",
               dayOfMonthOrdinalParse: /\d{1,2}/,
               relativeTime: {
@@ -932,7 +932,7 @@
               if (((e.abbr = t), null != oe[t]))
                 (S(
                   "defineLocaleOverride",
-                  "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.",
+                  "use moment.up.DateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.",
                 ),
                   (r = oe[t]._config));
               else if (null != e.parentLocale)
@@ -1029,10 +1029,10 @@
             if (!t._d) {
               for (
                 r = (function (t) {
-                  var e = new Date(i.now());
+                  var e = new .Date(i.now());
                   return t._useUTC
-                    ? [e.getUTCFullYear(), e.getUTCMonth(), e.getUTCDate()]
-                    : [e.getFullYear(), e.getMonth(), e.getDate()];
+                    ? [e.getUTCFullYear(), e.getUTCMonth(), e.getUTC.Date()]
+                    : [e.getFullYear(), e.getMonth(), e.get.Date()];
                 })(t),
                   t._w &&
                     null == t._a[vt] &&
@@ -1071,7 +1071,7 @@
                       (_(t)._overflowDayOfYear = !0),
                     (n = zt(o, 0, t._dayOfYear)),
                     (t._a[gt] = n.getUTCMonth()),
-                    (t._a[vt] = n.getUTCDate())),
+                    (t._a[vt] = n.getUTC.Date())),
                   e = 0;
                 e < 3 && null == t._a[e];
                 ++e
@@ -1088,7 +1088,7 @@
                   t._useUTC
                     ? zt
                     : function (t, e, n, r, i, a, o) {
-                        var s = new Date(t, e, n, r, i, a, o);
+                        var s = new .Date(t, e, n, r, i, a, o);
                         return (
                           t < 100 &&
                             t >= 0 &&
@@ -1137,7 +1137,7 @@
               ["HHmm", /\d\d\d\d/],
               ["HH", /\d\d/],
             ],
-            be = /^\/?Date\((\-?\d+)/i;
+            be = /^\/?.Date\((\-?\d+)/i;
           function ke(t) {
             var e,
               n,
@@ -1210,7 +1210,7 @@
                 !(function (t, e, n) {
                   if (t) {
                     var r = Gt.indexOf(t),
-                      i = new Date(e[0], e[1], e[2]).getDay();
+                      i = new .Date(e[0], e[1], e[2]).getDay();
                     if (r !== i)
                       return (
                         (_(n).weekdayMismatch = !0),
@@ -1269,7 +1269,7 @@
                     !0 === _(t).bigHour &&
                     t._a[Mt] > 0 &&
                     (_(t).bigHour = void 0),
-                  (_(t).parsedDateParts = t._a.slice(0)),
+                  (_(t).parsed.DateParts = t._a.slice(0)),
                   (_(t).meridiem = t._meridiem),
                   (t._a[Mt] =
                     ((l = t._locale),
@@ -1307,7 +1307,7 @@
                               if (0 === t._f.length)
                                 return (
                                   (_(t).invalidFormat = !0),
-                                  void (t._d = new Date(NaN))
+                                  void (t._d = new .Date(NaN))
                                 );
                               for (i = 0; i < t._f.length; i++)
                                 ((a = 0),
@@ -1328,9 +1328,9 @@
                             : (function (t) {
                                 var e = t._i;
                                 s(e)
-                                  ? (t._d = new Date(i.now()))
+                                  ? (t._d = new .Date(i.now()))
                                   : c(e)
-                                    ? (t._d = new Date(e.valueOf()))
+                                    ? (t._d = new .Date(e.valueOf()))
                                     : "string" == typeof e
                                       ? (function (t) {
                                           var e = be.exec(t._i);
@@ -1344,7 +1344,7 @@
                                                   i.createFromInputFallback(
                                                     t,
                                                   ))))
-                                            : (t._d = new Date(+e[1]));
+                                            : (t._d = new .Date(+e[1]));
                                         })(t)
                                       : a(e)
                                         ? ((t._a = l(e.slice(0), function (t) {
@@ -1359,7 +1359,7 @@
                                                   [
                                                     e.year,
                                                     e.month,
-                                                    e.day || e.date,
+                                                    e.day || e..Date,
                                                     e.hour,
                                                     e.minute,
                                                     e.second,
@@ -1373,7 +1373,7 @@
                                               }
                                             })(t)
                                           : u(e)
-                                            ? (t._d = new Date(e))
+                                            ? (t._d = new .Date(e))
                                             : i.createFromInputFallback(t);
                               })(t),
                       p(t) || (t._d = null),
@@ -1410,9 +1410,9 @@
             return Se(t, e, n, r, !1);
           }
           ((i.createFromInputFallback = T(
-            "value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.",
+            "value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js .Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO .Date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-.Date/ for more info.",
             function (t) {
-              t._d = new Date(t._i + (t._useUTC ? " UTC" : ""));
+              t._d = new .Date(t._i + (t._useUTC ? " UTC" : ""));
             },
           )),
             (i.ISO_8601 = function () {}),
@@ -1526,7 +1526,7 @@
                 (r =
                   (b(t) || c(t) ? t.valueOf() : Ee(t).valueOf()) - n.valueOf()),
                 n._d.setTime(n._d.valueOf() + r),
-                i.updateOffset(n, !1),
+                i.up.DateOffset(n, !1),
                 n)
               : Ee(t).local();
           }
@@ -1536,7 +1536,7 @@
           function We() {
             return !!this.isValid() && this._isUTC && 0 === this._offset;
           }
-          i.updateOffset = function () {};
+          i.up.DateOffset = function () {};
           var qe = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/,
             Ue =
               /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
@@ -1640,9 +1640,9 @@
             t.isValid() &&
               ((r = null == r || r),
               s && Ft(t, At(t, "Month") + s * n),
-              o && Ct(t, "Date", At(t, "Date") + o * n),
+              o && Ct(t, ".Date", At(t, ".Date") + o * n),
               a && t._d.setTime(t._d.valueOf() + a * n),
-              r && i.updateOffset(t, o || s));
+              r && i.up.DateOffset(t, o || s));
           }
           ((Ve.fn = He.prototype),
             (Ve.invalid = function () {
@@ -1696,7 +1696,7 @@
                   return (
                     this.year(o.getUTCFullYear()),
                     this.month(o.getUTCMonth()),
-                    this.date(o.getUTCDate()),
+                    this..Date(o.getUTC.Date()),
                     this
                   );
                 }.call(this, t, e, n, r, i));
@@ -1736,9 +1736,9 @@
             _t("Q", function (t, e) {
               e[gt] = 3 * (L(t) - 1);
             }),
-            q("D", ["DD", 2], "Do", "date"),
-            O("date", "D"),
-            N("date", 9),
+            q("D", ["DD", 2], "Do", ".Date"),
+            O(".Date", "D"),
+            N(".Date", 9),
             lt("D", K),
             lt("DD", K, G),
             lt("Do", function (t, e) {
@@ -1750,7 +1750,7 @@
             _t("Do", function (t, e) {
               e[vt] = L(t.match(K)[0]);
             }));
-          var on = Et("Date", !0);
+          var on = Et(".Date", !0);
           (q("DDD", ["DDDD", 3], "DDDo", "dayOfYear"),
             O("dayOfYear", "DDD"),
             N("dayOfYear", 4),
@@ -1872,7 +1872,7 @@
             (fn.endOf = function (t) {
               return void 0 === (t = H(t)) || "millisecond" === t
                 ? this
-                : ("date" === t && (t = "day"),
+                : (".Date" === t && (t = "day"),
                   this.startOf(t)
                     .add(1, "isoWeek" === t ? "week" : t)
                     .subtract(1, "ms"));
@@ -1886,7 +1886,7 @@
               return this.isValid() &&
                 ((b(t) && t.isValid()) || Ee(t).isValid())
                 ? Ve({ to: this, from: t }).locale(this.locale()).humanize(!e)
-                : this.localeData().invalidDate();
+                : this.localeData().invalid.Date();
             }),
             (fn.fromNow = function (t) {
               return this.from(Ee(), t);
@@ -1895,7 +1895,7 @@
               return this.isValid() &&
                 ((b(t) && t.isValid()) || Ee(t).isValid())
                 ? Ve({ from: this, to: t }).locale(this.locale()).humanize(!e)
-                : this.localeData().invalidDate();
+                : this.localeData().invalid.Date();
             }),
             (fn.toNow = function (t) {
               return this.to(Ee(), t);
@@ -1988,11 +1988,11 @@
                   this.month(0);
                 case "quarter":
                 case "month":
-                  this.date(1);
+                  this..Date(1);
                 case "week":
                 case "isoWeek":
                 case "day":
-                case "date":
+                case ".Date":
                   this.hours(0);
                 case "hour":
                   this.minutes(0);
@@ -2014,7 +2014,7 @@
               return [
                 t.year(),
                 t.month(),
-                t.date(),
+                t..Date(),
                 t.hour(),
                 t.minute(),
                 t.second(),
@@ -2026,15 +2026,15 @@
               return {
                 years: t.year(),
                 months: t.month(),
-                date: t.date(),
+                .Date: t..Date(),
                 hours: t.hours(),
                 minutes: t.minutes(),
                 seconds: t.seconds(),
                 milliseconds: t.milliseconds(),
               };
             }),
-            (fn.toDate = function () {
-              return new Date(this.valueOf());
+            (fn.to.Date = function () {
+              return new .Date(this.valueOf());
             }),
             (fn.toISOString = function (t) {
               if (!this.isValid()) return null;
@@ -2047,10 +2047,10 @@
                       ? "YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]"
                       : "YYYYYY-MM-DD[T]HH:mm:ss.SSSZ",
                   )
-                : E(Date.prototype.toISOString)
+                : E(.Date.prototype.toISOString)
                   ? e
-                    ? this.toDate().toISOString()
-                    : new Date(this.valueOf() + 60 * this.utcOffset() * 1e3)
+                    ? this.to.Date().toISOString()
+                    : new .Date(this.valueOf() + 60 * this.utcOffset() * 1e3)
                         .toISOString()
                         .replace("Z", U(n, "Z"))
                   : U(
@@ -2141,7 +2141,7 @@
             (fn.isoWeeksInYear = function () {
               return Vt(this.year(), 1, 4);
             }),
-            (fn.date = on),
+            (fn..Date = on),
             (fn.day = fn.days =
               function (t) {
                 if (!this.isValid()) return null != t ? this : NaN;
@@ -2208,7 +2208,7 @@
                       ? Xe(this, Ve(t - a, "m"), 1, !1)
                       : this._changeInProgress ||
                         ((this._changeInProgress = !0),
-                        i.updateOffset(this, !0),
+                        i.up.DateOffset(this, !0),
                         (this._changeInProgress = null))),
                   this
                 );
@@ -2262,8 +2262,8 @@
             (fn.zoneName = function () {
               return this._isUTC ? "Coordinated Universal Time" : "";
             }),
-            (fn.dates = T(
-              "dates accessor is deprecated. Use date instead.",
+            (fn..Dates = T(
+              ".Dates accessor is deprecated. Use .Date instead.",
               on,
             )),
             (fn.months = T(
@@ -2330,21 +2330,21 @@
             var r = this._calendar[t] || this._calendar.sameElse;
             return E(r) ? r.call(e, n) : r;
           }),
-            (_n.longDateFormat = function (t) {
-              var e = this._longDateFormat[t],
-                n = this._longDateFormat[t.toUpperCase()];
+            (_n.long.DateFormat = function (t) {
+              var e = this._long.DateFormat[t],
+                n = this._long.DateFormat[t.toUpperCase()];
               return e || !n
                 ? e
-                : ((this._longDateFormat[t] = n.replace(
+                : ((this._long.DateFormat[t] = n.replace(
                     /MMMM|MM|DD|dddd/g,
                     function (t) {
                       return t.slice(1);
                     },
                   )),
-                  this._longDateFormat[t]);
+                  this._long.DateFormat[t]);
             }),
-            (_n.invalidDate = function () {
-              return this._invalidDate;
+            (_n.invalid.Date = function () {
+              return this._invalid.Date;
             }),
             (_n.ordinal = function (t) {
               return this._ordinal.replace("%d", t);
@@ -2750,7 +2750,7 @@
             return (t > 0) - (t < 0) || +t;
           }
           function qn() {
-            if (!this.isValid()) return this.localeData().invalidDate();
+            if (!this.isValid()) return this.localeData().invalid.Date();
             var t,
               e,
               n = zn(this._milliseconds) / 1e3,
@@ -2901,7 +2901,7 @@
             (Un.months = Nn),
             (Un.years = Bn),
             (Un.humanize = function (t) {
-              if (!this.isValid()) return this.localeData().invalidDate();
+              if (!this.isValid()) return this.localeData().invalid.Date();
               var e = this.localeData(),
                 n = (function (t, e, n) {
                   var r = Ve(t).abs(),
@@ -2948,10 +2948,10 @@
             lt("x", at),
             lt("X", /[+-]?\d+(\.\d{1,3})?/),
             _t("X", function (t, e, n) {
-              n._d = new Date(1e3 * parseFloat(t, 10));
+              n._d = new .Date(1e3 * parseFloat(t, 10));
             }),
             _t("x", function (t, e, n) {
-              n._d = new Date(L(t));
+              n._d = new .Date(L(t));
             }),
             (i.version = "2.21.0"),
             (e = Ee),
@@ -2963,7 +2963,7 @@
               return je("isAfter", [].slice.call(arguments, 0));
             }),
             (i.now = function () {
-              return Date.now ? Date.now() : +new Date();
+              return .Date.now ? .Date.now() : +new .Date();
             }),
             (i.utc = h),
             (i.unix = function (t) {
@@ -2972,7 +2972,7 @@
             (i.months = function (t, e) {
               return mn(t, e, "months");
             }),
-            (i.isDate = c),
+            (i.is.Date = c),
             (i.locale = le),
             (i.invalid = m),
             (i.duration = Ve),
@@ -2992,7 +2992,7 @@
               return yn(t, e, n, "weekdaysMin");
             }),
             (i.defineLocale = de),
-            (i.updateLocale = function (t, e) {
+            (i.up.DateLocale = function (t, e) {
               if (null != e) {
                 var n,
                   r,
@@ -3047,10 +3047,10 @@
             }),
             (i.prototype = fn),
             (i.HTML5_FMT = {
-              DATETIME_LOCAL: "YYYY-MM-DDTHH:mm",
-              DATETIME_LOCAL_SECONDS: "YYYY-MM-DDTHH:mm:ss",
-              DATETIME_LOCAL_MS: "YYYY-MM-DDTHH:mm:ss.SSS",
-              DATE: "YYYY-MM-DD",
+              .DateTIME_LOCAL: "YYYY-MM-DDTHH:mm",
+              .DateTIME_LOCAL_SECONDS: "YYYY-MM-DDTHH:mm:ss",
+              .DateTIME_LOCAL_MS: "YYYY-MM-DDTHH:mm:ss.SSS",
+              .Date: "YYYY-MM-DD",
               TIME: "HH:mm",
               TIME_SECONDS: "HH:mm:ss",
               TIME_MS: "HH:mm:ss.SSS",
@@ -5485,7 +5485,7 @@
           };
         },
         Fn = function (t, e) {
-          var n = new Date();
+          var n = new .Date();
           return (
             (e -= t = +t),
             function (r) {
@@ -5572,7 +5572,7 @@
                     : Vn
                   : e instanceof Ie
                     ? Cn
-                    : e instanceof Date
+                    : e instanceof .Date
                       ? Fn
                       : Array.isArray(e)
                         ? Pn
@@ -5696,7 +5696,7 @@
                     "g",
                   )),
                 Un.setAttribute("transform", t),
-                (t = Un.transform.baseVal.consolidate())
+                (t = Un.transform.baseVal.consoli.Date())
                   ? ((t = t.matrix), Zn(t.a, t.b, t.c, t.d, t.e, t.f))
                   : Xn);
           },
@@ -5839,7 +5839,7 @@
         wr =
           "object" == typeof performance && performance.now
             ? performance
-            : Date,
+            : .Date,
         xr =
           "object" == typeof window && window.requestAnimationFrame
             ? window.requestAnimationFrame.bind(window)
@@ -14128,16 +14128,16 @@
           r
         );
       }
-      var y_ = new Date(),
-        g_ = new Date();
+      var y_ = new .Date(),
+        g_ = new .Date();
       function v_(t, e, n, r) {
         function i(e) {
-          return (t((e = new Date(+e))), e);
+          return (t((e = new .Date(+e))), e);
         }
         return (
           (i.floor = i),
           (i.ceil = function (n) {
-            return (t((n = new Date(n - 1))), e(n, 1), t(n), n);
+            return (t((n = new .Date(n - 1))), e(n, 1), t(n), n);
           }),
           (i.round = function (t) {
             var e = i(t),
@@ -14145,7 +14145,7 @@
             return t - e < n - t ? e : n;
           }),
           (i.offset = function (t, n) {
-            return (e((t = new Date(+t)), null == n ? 1 : Math.floor(n)), t);
+            return (e((t = new .Date(+t)), null == n ? 1 : Math.floor(n)), t);
           }),
           (i.range = function (n, r, a) {
             var o,
@@ -14157,7 +14157,7 @@
             )
               return s;
             do {
-              (s.push((o = new Date(+n))), e(n, a), t(n));
+              (s.push((o = new .Date(+n))), e(n, a), t(n));
             } while (o < n && n < r);
             return s;
           }),
@@ -14292,7 +14292,7 @@
             t.setHours(0, 0, 0, 0);
           },
           function (t, e) {
-            t.setDate(t.getDate() + e);
+            t.set.Date(t.get.Date() + e);
           },
           function (t, e) {
             return (
@@ -14301,7 +14301,7 @@
             );
           },
           function (t) {
-            return t.getDate() - 1;
+            return t.get.Date() - 1;
           },
         ),
         H_ = O_,
@@ -14309,11 +14309,11 @@
       function F_(t) {
         return v_(
           function (e) {
-            (e.setDate(e.getDate() - ((e.getDay() + 7 - t) % 7)),
+            (e.set.Date(e.get.Date() - ((e.getDay() + 7 - t) % 7)),
               e.setHours(0, 0, 0, 0));
           },
           function (t, e) {
-            t.setDate(t.getDate() + 7 * e);
+            t.set.Date(t.get.Date() + 7 * e);
           },
           function (t, e) {
             return (
@@ -14339,7 +14339,7 @@
         Z_ = q_.range,
         K_ = v_(
           function (t) {
-            (t.setDate(1), t.setHours(0, 0, 0, 0));
+            (t.set.Date(1), t.setHours(0, 0, 0, 0));
           },
           function (t, e) {
             t.setMonth(t.getMonth() + e);
@@ -14424,13 +14424,13 @@
             t.setUTCHours(0, 0, 0, 0);
           },
           function (t, e) {
-            t.setUTCDate(t.getUTCDate() + e);
+            t.setUTC.Date(t.getUTC.Date() + e);
           },
           function (t, e) {
             return (e - t) / 864e5;
           },
           function (t) {
-            return t.getUTCDate() - 1;
+            return t.getUTC.Date() - 1;
           },
         ),
         dp = lp,
@@ -14438,11 +14438,11 @@
       function hp(t) {
         return v_(
           function (e) {
-            (e.setUTCDate(e.getUTCDate() - ((e.getUTCDay() + 7 - t) % 7)),
+            (e.setUTC.Date(e.getUTC.Date() - ((e.getUTCDay() + 7 - t) % 7)),
               e.setUTCHours(0, 0, 0, 0));
           },
           function (t, e) {
-            t.setUTCDate(t.getUTCDate() + 7 * e);
+            t.setUTC.Date(t.getUTC.Date() + 7 * e);
           },
           function (t, e) {
             return (e - t) / w_;
@@ -14465,7 +14465,7 @@
         Yp = Mp.range,
         Dp = v_(
           function (t) {
-            (t.setUTCDate(1), t.setUTCHours(0, 0, 0, 0));
+            (t.setUTC.Date(1), t.setUTCHours(0, 0, 0, 0));
           },
           function (t, e) {
             t.setUTCMonth(t.getUTCMonth() + e);
@@ -14515,24 +14515,24 @@
         jp = Ap.range;
       function Op(t) {
         if (0 <= t.y && t.y < 100) {
-          var e = new Date(-1, t.m, t.d, t.H, t.M, t.S, t.L);
+          var e = new .Date(-1, t.m, t.d, t.H, t.M, t.S, t.L);
           return (e.setFullYear(t.y), e);
         }
-        return new Date(t.y, t.m, t.d, t.H, t.M, t.S, t.L);
+        return new .Date(t.y, t.m, t.d, t.H, t.M, t.S, t.L);
       }
       function Hp(t) {
         if (0 <= t.y && t.y < 100) {
-          var e = new Date(Date.UTC(-1, t.m, t.d, t.H, t.M, t.S, t.L));
+          var e = new .Date(.Date.UTC(-1, t.m, t.d, t.H, t.M, t.S, t.L));
           return (e.setUTCFullYear(t.y), e);
         }
-        return new Date(Date.UTC(t.y, t.m, t.d, t.H, t.M, t.S, t.L));
+        return new .Date(.Date.UTC(t.y, t.m, t.d, t.H, t.M, t.S, t.L));
       }
       function Pp(t) {
         return { y: t, m: 0, d: 1, H: 0, M: 0, S: 0, L: 0 };
       }
       function Fp(t) {
-        var e = t.dateTime,
-          n = t.date,
+        var e = t..DateTime,
+          n = t..Date,
           r = t.time,
           i = t.periods,
           a = t.days,
@@ -14692,7 +14692,7 @@
               s = -1,
               u = 0,
               c = t.length;
-            for (n instanceof Date || (n = new Date(+n)); ++s < c; )
+            for (n instanceof .Date || (n = new .Date(+n)); ++s < c; )
               37 === t.charCodeAt(s) &&
                 (o.push(t.slice(u, s)),
                 null != (i = Wp[(r = t.charAt(++s))])
@@ -14710,7 +14710,7 @@
               i,
               a = Pp(1900);
             if (w(a, t, (n += ""), 0) != n.length) return null;
-            if ("Q" in a) return new Date(a.Q);
+            if ("Q" in a) return new .Date(a.Q);
             if (("p" in a && (a.H = (a.H % 12) + 12 * a.p), "V" in a)) {
               if (a.V < 1 || a.V > 53) return null;
               ("w" in a || (a.w = 1),
@@ -14722,7 +14722,7 @@
                     (r = dp.offset(r, 7 * (a.V - 1))),
                     (a.y = r.getUTCFullYear()),
                     (a.m = r.getUTCMonth()),
-                    (a.d = r.getUTCDate() + ((a.w + 6) % 7)))
+                    (a.d = r.getUTC.Date() + ((a.w + 6) % 7)))
                   : ((r =
                       (i = (r = e(Pp(a.y))).getDay()) > 4 || 0 === i
                         ? B_.ceil(r)
@@ -14730,7 +14730,7 @@
                     (r = H_.offset(r, 7 * (a.V - 1))),
                     (a.y = r.getFullYear()),
                     (a.m = r.getMonth()),
-                    (a.d = r.getDate() + ((a.w + 6) % 7))));
+                    (a.d = r.get.Date() + ((a.w + 6) % 7))));
             } else
               ("W" in a || "U" in a) &&
                 ("w" in a || (a.w = "u" in a ? a.u % 7 : "W" in a ? 1 : 0),
@@ -14912,7 +14912,7 @@
         return r ? ((t.Q = 1e3 * +r[0]), n + r[0].length) : -1;
       }
       function mm(t, e) {
-        return $p(t.getDate(), e, 2);
+        return $p(t.get.Date(), e, 2);
       }
       function ym(t, e) {
         return $p(t.getHours(), e, 2);
@@ -14973,7 +14973,7 @@
         );
       }
       function jm(t, e) {
-        return $p(t.getUTCDate(), e, 2);
+        return $p(t.getUTC.Date(), e, 2);
       }
       function Om(t, e) {
         return $p(t.getUTCHours(), e, 2);
@@ -15048,8 +15048,8 @@
         );
       }
       Qm({
-        dateTime: "%x, %X",
-        date: "%-m/%-d/%Y",
+        .DateTime: "%x, %X",
+        .Date: "%-m/%-d/%Y",
         time: "%-I:%M:%S %p",
         periods: ["AM", "PM"],
         days: [
@@ -15091,14 +15091,14 @@
           "Dec",
         ],
       });
-      var ty = Date.prototype.toISOString
+      var ty = .Date.prototype.toISOString
         ? function (t) {
             return t.toISOString();
           }
         : Ip("%Y-%m-%dT%H:%M:%S.%LZ");
-      var ey = +new Date("2000-01-01T00:00:00.000Z")
+      var ey = +new .Date("2000-01-01T00:00:00.000Z")
           ? function (t) {
-              var e = new Date(t);
+              var e = new .Date(t);
               return isNaN(e) ? null : e;
             }
           : zp("%Y-%m-%dT%H:%M:%S.%LZ"),
@@ -15110,10 +15110,10 @@
         sy = 30 * ay,
         uy = 365 * ay;
       function cy(t) {
-        return new Date(t);
+        return new .Date(t);
       }
       function ly(t) {
-        return t instanceof Date ? +t : +new Date(+t);
+        return t instanceof .Date ? +t : +new .Date(+t);
       }
       function dy(t, e, n, r, a, o, s, u, c) {
         var l = Kh(Gh, Nn),
@@ -15183,7 +15183,7 @@
         }
         return (
           (l.invert = function (t) {
-            return new Date(d(t));
+            return new .Date(d(t));
           }),
           (l.domain = function (t) {
             return arguments.length ? f(Bh.call(t, ly)) : f().map(cy);
@@ -15215,14 +15215,14 @@
       }
       var fy = function () {
           return dy(np, Q_, N_, H_, C_, S_, T_, b_, Bp).domain([
-            new Date(2e3, 0, 1),
-            new Date(2e3, 0, 2),
+            new .Date(2e3, 0, 1),
+            new .Date(2e3, 0, 2),
           ]);
         },
         hy = function () {
           return dy(Cp, Sp, _p, dp, up, ap, T_, b_, Ip).domain([
-            Date.UTC(2e3, 0, 1),
-            Date.UTC(2e3, 0, 2),
+            .Date.UTC(2e3, 0, 1),
+            .Date.UTC(2e3, 0, 2),
           ]);
         },
         _y = function (t) {
@@ -19144,7 +19144,7 @@
         n.d(e, "interpolateBasisClosed", function () {
           return Tn;
         }),
-        n.d(e, "interpolateDate", function () {
+        n.d(e, "interpolate.Date", function () {
           return Fn;
         }),
         n.d(e, "interpolateNumber", function () {
@@ -20118,7 +20118,7 @@
             R = "[object Array]",
             I = "[object AsyncFunction]",
             z = "[object Boolean]",
-            W = "[object Date]",
+            W = "[object .Date]",
             q = "[object DOMException]",
             U = "[object Error]",
             V = "[object Function]",
@@ -20243,7 +20243,7 @@
               "Array",
               "Buffer",
               "DataView",
-              "Date",
+              ".Date",
               "Error",
               "Float32Array",
               "Float64Array",
@@ -20348,7 +20348,7 @@
               } catch (t) {}
             })(),
             Fe = Pe && Pe.isArrayBuffer,
-            Ne = Pe && Pe.isDate,
+            Ne = Pe && Pe.is.Date,
             Be = Pe && Pe.isMap,
             Re = Pe && Pe.isRegExp,
             Ie = Pe && Pe.isSet,
@@ -20810,7 +20810,7 @@
               Xt = (e =
                 null == e ? Ae : jn.defaults(Ae.Object(), e, jn.pick(Ae, ke)))
                 .Array,
-              Zt = e.Date,
+              Zt = e..Date,
               Kt = e.Error,
               Qt = e.Function,
               te = e.Math,
@@ -20862,7 +20862,7 @@
                 } catch (t) {}
               })(),
               Pn = e.clearTimeout !== Ae.clearTimeout && e.clearTimeout,
-              Fn = Zt && Zt.now !== Ae.Date.now && Zt.now,
+              Fn = Zt && Zt.now !== Ae..Date.now && Zt.now,
               Nn = e.setTimeout !== Ae.setTimeout && e.setTimeout,
               Bn = te.ceil,
               Rn = te.floor,
@@ -23138,7 +23138,7 @@
               Qo =
                 Fn ||
                 function () {
-                  return Ae.Date.now();
+                  return Ae..Date.now();
                 };
             function ts(t, e, n) {
               return (
@@ -24161,10 +24161,10 @@
               }),
               (_r.unzip = Ao),
               (_r.unzipWith = Co),
-              (_r.update = function (t, e, n) {
+              (_r.up.Date = function (t, e, n) {
                 return null == t ? t : Ri(t, e, Vi(n));
               }),
-              (_r.updateWith = function (t, e, n, i) {
+              (_r.up.DateWith = function (t, e, n, i) {
                 return (
                   (i = "function" == typeof i ? i : r),
                   null == t ? t : Ri(t, e, Vi(n), i)
@@ -24314,7 +24314,7 @@
                 return !0 === t || !1 === t || (Ds(t) && Qr(t) == z);
               }),
               (_r.isBuffer = bs),
-              (_r.isDate = ks),
+              (_r.is.Date = ks),
               (_r.isElement = function (t) {
                 return Ds(t) && 1 === t.nodeType && !As(t);
               }),
@@ -27388,7 +27388,7 @@
           e.addSection =
           e.getTitle =
           e.setTitle =
-          e.setDateFormat =
+          e.set.DateFormat =
           e.getAxisFormat =
           e.setAxisFormat =
           e.clear =
@@ -27419,7 +27419,7 @@
         p = (e.getAxisFormat = function () {
           return u;
         }),
-        m = (e.setDateFormat = function (t) {
+        m = (e.set.DateFormat = function (t) {
           s = t;
         }),
         y = (e.setTitle = function (t) {
@@ -27441,20 +27441,20 @@
           if (null !== r) {
             var i = E(r[1]);
             if (void 0 === i) {
-              var s = new Date();
+              var s = new .Date();
               return (s.setHours(0, 0, 0, 0), s);
             }
             return i.endTime;
           }
           return (0, a.default)(n, e.trim(), !0).isValid()
-            ? (0, a.default)(n, e.trim(), !0).toDate()
-            : (o.logger.debug("Invalid date:" + n),
-              o.logger.debug("With date format:" + e.trim()),
-              new Date());
+            ? (0, a.default)(n, e.trim(), !0).to.Date()
+            : (o.logger.debug("Invalid .Date:" + n),
+              o.logger.debug("With .Date format:" + e.trim()),
+              new .Date());
         },
         k = function (t, e, n) {
           if (((n = n.trim()), (0, a.default)(n, e.trim(), !0).isValid()))
-            return (0, a.default)(n, e.trim()).toDate();
+            return (0, a.default)(n, e.trim()).to.Date();
           var r = (0, a.default)(t),
             i = /^([\d]+)([wdhms])/.exec(n.trim());
           if (null !== i) {
@@ -27474,9 +27474,9 @@
               case "w":
                 r.add(i[1], "weeks");
             }
-            return r.toDate();
+            return r.to.Date();
           }
-          return r.toDate();
+          return r.to.Date();
         },
         L = 0,
         w = function (t) {
@@ -27520,12 +27520,12 @@
                   break;
                 case 2:
                   ((r.id = w()),
-                    (r.startTime = { type: "getStartDate", startData: n[0] }),
+                    (r.startTime = { type: "getStart.Date", startData: n[0] }),
                     (r.endTime = { data: n[1] }));
                   break;
                 case 3:
                   ((r.id = w(n[0])),
-                    (r.startTime = { type: "getStartDate", startData: n[1] }),
+                    (r.startTime = { type: "getStart.Date", startData: n[1] }),
                     (r.endTime = { data: n[2] }));
               }
               return r;
@@ -27601,7 +27601,7 @@
                     var r = E(e.prevTaskId);
                     e.startTime = r.endTime;
                     break;
-                  case "getStartDate":
+                  case "getStart.Date":
                     (n = b(0, s, Y[t].raw.startTime.startData)) &&
                       (Y[t].startTime = n);
                 }
@@ -27626,7 +27626,7 @@
         };
       e.default = {
         clear: h,
-        setDateFormat: m,
+        set.DateFormat: m,
         setAxisFormat: _,
         getAxisFormat: p,
         setTitle: y,
@@ -27665,7 +27665,7 @@
                 SPACE: 8,
                 statement: 9,
                 NL: 10,
-                dateFormat: 11,
+                .DateFormat: 11,
                 axisFormat: 12,
                 title: 13,
                 section: 14,
@@ -27680,7 +27680,7 @@
                 6: "EOF",
                 8: "SPACE",
                 10: "NL",
-                11: "dateFormat",
+                11: ".DateFormat",
                 12: "axisFormat",
                 13: "title",
                 14: "section",
@@ -27722,7 +27722,7 @@
                     this.$ = [];
                     break;
                   case 8:
-                    (r.setDateFormat(a[s].substr(11)),
+                    (r.set.DateFormat(a[s].substr(11)),
                       (this.$ = a[s].substr(11)));
                     break;
                   case 9:
@@ -28169,7 +28169,7 @@
                   case 6:
                     return 12;
                   case 7:
-                    return "date";
+                    return ".Date";
                   case 8:
                     return 13;
                   case 9:
@@ -28192,7 +28192,7 @@
                 /^(?:#[^\n]*)/i,
                 /^(?:%[^\n]*)/i,
                 /^(?:gantt\b)/i,
-                /^(?:dateFormat\s[^#\n;]+)/i,
+                /^(?:.DateFormat\s[^#\n;]+)/i,
                 /^(?:axisFormat\s[^#\n;]+)/i,
                 /^(?:\d\d\d\d-\d\d-\d\d\b)/i,
                 /^(?:title\s[^#\n;]+)/i,
@@ -31638,7 +31638,7 @@
                     }));
                 })(e, n);
               }),
-                n("  updateInputGraph", function () {
+                n("  up.DateInputGraph", function () {
                   !(function (t, e) {
                     (r.default.forEach(t.nodes(), function (n) {
                       var r = t.node(n),
@@ -32422,18 +32422,18 @@
                   case 118:
                   case 119:
                   case 120:
-                    ((this.$ = a[s - 4]), r.updateLink(a[s - 2], a[s]));
+                    ((this.$ = a[s - 4]), r.up.DateLink(a[s - 2], a[s]));
                     break;
                   case 121:
                   case 122:
                     ((this.$ = a[s - 8]),
-                      r.updateLinkInterpolate(a[s - 6], a[s - 2]),
-                      r.updateLink(a[s - 6], a[s]));
+                      r.up.DateLinkInterpolate(a[s - 6], a[s - 2]),
+                      r.up.DateLink(a[s - 6], a[s]));
                     break;
                   case 123:
                   case 124:
                     ((this.$ = a[s - 6]),
-                      r.updateLinkInterpolate(a[s - 4], a[s]));
+                      r.up.DateLinkInterpolate(a[s - 4], a[s]));
                     break;
                   case 126:
                     this.$ = [a[s]];
@@ -34790,8 +34790,8 @@
           e.setClass =
           e.setDirection =
           e.addClass =
-          e.updateLink =
-          e.updateLinkInterpolate =
+          e.up.DateLink =
+          e.up.DateLinkInterpolate =
           e.addLink =
           e.addVertex =
             void 0));
@@ -34857,10 +34857,10 @@
             void 0 !== n && ((i.type = n.type), (i.stroke = n.stroke)),
             l.push(i));
         }),
-        v = (e.updateLinkInterpolate = function (t, e) {
+        v = (e.up.DateLinkInterpolate = function (t, e) {
           "default" === t ? (l.defaultInterpolate = e) : (l[t].interpolate = e);
         }),
-        M = (e.updateLink = function (t, e) {
+        M = (e.up.DateLink = function (t, e) {
           "default" === t
             ? (l.defaultStyle = e)
             : (-1 === u.default.isSubstringInArray("fill", e) &&
@@ -35038,8 +35038,8 @@
       e.default = {
         addVertex: y,
         addLink: g,
-        updateLinkInterpolate: v,
-        updateLink: M,
+        up.DateLinkInterpolate: v,
+        up.DateLink: M,
         addClass: b,
         setDirection: k,
         setClass: L,
@@ -35288,7 +35288,7 @@
           ),
           weekdaysShort: "週日_週一_週二_週三_週四_週五_週六".split("_"),
           weekdaysMin: "日_一_二_三_四_五_六".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "YYYY/MM/DD",
@@ -35387,7 +35387,7 @@
           ),
           weekdaysShort: "週日_週一_週二_週三_週四_週五_週六".split("_"),
           weekdaysMin: "日_一_二_三_四_五_六".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "YYYY/MM/DD",
@@ -35486,7 +35486,7 @@
           ),
           weekdaysShort: "周日_周一_周二_周三_周四_周五_周六".split("_"),
           weekdaysMin: "日_一_二_三_四_五_六".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "YYYY/MM/DD",
@@ -35583,7 +35583,7 @@
           weekdays: "Àìkú_Ajé_Ìsẹ́gun_Ọjọ́rú_Ọjọ́bọ_Ẹtì_Àbámẹ́ta".split("_"),
           weekdaysShort: "Àìk_Ajé_Ìsẹ́_Ọjr_Ọjb_Ẹtì_Àbá".split("_"),
           weekdaysMin: "Àì_Aj_Ìs_Ọr_Ọb_Ẹt_Àb".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "h:mm A",
             LTS: "h:mm:ss A",
             L: "DD/MM/YYYY",
@@ -35641,7 +35641,7 @@
           weekdaysShort: "S~úñ_~Móñ_~Túé_~Wéd_~Thú_~Frí_~Sát".split("_"),
           weekdaysMin: "S~ú_Mó~_Tú_~Wé_T~h_Fr~_Sá".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             L: "DD/MM/YYYY",
             LL: "D MMMM YYYY",
@@ -35716,7 +35716,7 @@
           meridiem: function (t, e, n) {
             return t < 12 ? (n ? "sa" : "SA") : n ? "ch" : "CH";
           },
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -35776,7 +35776,7 @@
             ),
           weekdaysShort: "Yak_Dush_Sesh_Chor_Pay_Jum_Shan".split("_"),
           weekdaysMin: "Ya_Du_Se_Cho_Pa_Ju_Sha".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -35827,7 +35827,7 @@
             "Якшанба_Душанба_Сешанба_Чоршанба_Пайшанба_Жума_Шанба".split("_"),
           weekdaysShort: "Якш_Душ_Сеш_Чор_Пай_Жум_Шан".split("_"),
           weekdaysMin: "Як_Ду_Се_Чо_Па_Жу_Ша".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -35887,7 +35887,7 @@
           weekdays: n,
           weekdaysShort: n,
           weekdaysMin: n,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -36013,7 +36013,7 @@
           },
           weekdaysShort: "нд_пн_вт_ср_чт_пт_сб".split("_"),
           weekdaysMin: "нд_пн_вт_ср_чт_пт_сб".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -36105,7 +36105,7 @@
             "يەكشەنبە_دۈشەنبە_سەيشەنبە_چارشەنبە_پەيشەنبە_جۈمە_شەنبە".split("_"),
           weekdaysShort: "يە_دۈ_سە_چا_پە_جۈ_شە".split("_"),
           weekdaysMin: "يە_دۈ_سە_چا_پە_جۈ_شە".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "YYYY-MM-DD",
@@ -36208,7 +36208,7 @@
           weekdaysMin: "asamas_aynas_asinas_akras_akwas_asimwas_asiḍyas".split(
             "_",
           ),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -36264,7 +36264,7 @@
           weekdaysMin: "ⴰⵙⴰⵎⴰⵙ_ⴰⵢⵏⴰⵙ_ⴰⵙⵉⵏⴰⵙ_ⴰⴽⵔⴰⵙ_ⴰⴽⵡⴰⵙ_ⴰⵙⵉⵎⵡⴰⵙ_ⴰⵙⵉⴹⵢⴰⵙ".split(
             "_",
           ),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -36333,7 +36333,7 @@
           ),
           weekdaysShort: "Súl_Lún_Mai_Már_Xhú_Vié_Sát".split("_"),
           weekdaysMin: "Sú_Lú_Ma_Má_Xh_Vi_Sá".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH.mm",
             LTS: "HH.mm.ss",
             L: "DD.MM.YYYY",
@@ -36413,7 +36413,7 @@
             "Pazar_Pazartesi_Salı_Çarşamba_Perşembe_Cuma_Cumartesi".split("_"),
           weekdaysShort: "Paz_Pts_Sal_Çar_Per_Cum_Cts".split("_"),
           weekdaysMin: "Pz_Pt_Sa_Ça_Pe_Cu_Ct".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -36518,7 +36518,7 @@
             "lojmItjaj_DaSjaj_povjaj_ghItlhjaj_loghjaj_buqjaj_ghInjaj".split(
               "_",
             ),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -36591,7 +36591,7 @@
             "Linggo_Lunes_Martes_Miyerkules_Huwebes_Biyernes_Sabado".split("_"),
           weekdaysShort: "Lin_Lun_Mar_Miy_Huw_Biy_Sab".split("_"),
           weekdaysMin: "Li_Lu_Ma_Mi_Hu_Bi_Sab".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "MM/D/YYYY",
@@ -36650,7 +36650,7 @@
           ),
           weekdaysMin: "อา._จ._อ._พ._พฤ._ศ._ส.".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD/MM/YYYY",
@@ -36731,7 +36731,7 @@
             "якшанбе_душанбе_сешанбе_чоршанбе_панҷшанбе_ҷумъа_шанбе".split("_"),
           weekdaysShort: "яшб_дшб_сшб_чшб_пшб_ҷум_шнб".split("_"),
           weekdaysMin: "яш_дш_сш_чш_пш_ҷм_шб".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -36818,7 +36818,7 @@
           ),
           weekdaysShort: "Dom_Seg_Ters_Kua_Kint_Sest_Sab".split("_"),
           weekdaysMin: "Do_Seg_Te_Ku_Ki_Ses_Sa".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -36888,7 +36888,7 @@
             ),
           weekdaysShort: "ఆది_సోమ_మంగళ_బుధ_గురు_శుక్ర_శని".split("_"),
           weekdaysMin: "ఆ_సో_మం_బు_గు_శు_శ".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm",
             LTS: "A h:mm:ss",
             L: "DD/MM/YYYY",
@@ -36999,7 +36999,7 @@
           weekdaysShort:
             "ஞாயிறு_திங்கள்_செவ்வாய்_புதன்_வியாழன்_வெள்ளி_சனி".split("_"),
           weekdaysMin: "ஞா_தி_செ_பு_வி_வெ_ச".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -37097,7 +37097,7 @@
           weekdaysShort: "Jpl_Jtat_Jnne_Jtan_Alh_Ijm_Jmos".split("_"),
           weekdaysMin: "J2_J3_J4_J5_Al_Ij_J1".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -37149,7 +37149,7 @@
           ),
           weekdaysShort: "sön_mån_tis_ons_tor_fre_lör".split("_"),
           weekdaysMin: "sö_må_ti_on_to_fr_lö".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "YYYY-MM-DD",
@@ -37218,7 +37218,7 @@
           weekdaysShort: "Lis_Umb_Lsb_Les_Lsi_Lsh_Umg".split("_"),
           weekdaysMin: "Li_Us_Lb_Lt_Ls_Lh_Ug".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "h:mm A",
             LTS: "h:mm:ss A",
             L: "DD/MM/YYYY",
@@ -37324,7 +37324,7 @@
           weekdaysShort: "нед._пон._уто._сре._чет._пет._суб.".split("_"),
           weekdaysMin: "не_по_ут_ср_че_пе_су".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -37427,7 +37427,7 @@
           weekdaysShort: "ned._pon._uto._sre._čet._pet._sub.".split("_"),
           weekdaysMin: "ne_po_ut_sr_če_pe_su".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -37514,7 +37514,7 @@
           meridiem: function (t, e, n) {
             return t < 12 ? "PD" : "MD";
           },
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -37684,7 +37684,7 @@
           weekdaysShort: "ned._pon._tor._sre._čet._pet._sob.".split("_"),
           weekdaysMin: "ne_po_to_sr_če_pe_so".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -37802,7 +37802,7 @@
           ),
           weekdaysShort: "ne_po_ut_st_št_pi_so".split("_"),
           weekdaysMin: "ne_po_ut_st_št_pi_so".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -37888,7 +37888,7 @@
           weekdaysShort: "ඉරි_සඳු_අඟ_බදා_බ්‍රහ_සිකු_සෙන".split("_"),
           weekdaysMin: "ඉ_ස_අ_බ_බ්‍ර_සි_සෙ".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "a h:mm",
             LTS: "a h:mm:ss",
             L: "YYYY/MM/DD",
@@ -37952,7 +37952,7 @@
             ),
           weekdaysShort: "sotn_vuos_maŋ_gask_duor_bear_láv".split("_"),
           weekdaysMin: "s_v_m_g_d_b_L".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -38014,7 +38014,7 @@
           weekdays: n,
           weekdaysShort: n,
           weekdaysMin: n,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -38152,7 +38152,7 @@
             /^(январ[яь]|феврал[яь]|марта?|апрел[яь]|ма[яй]|июн[яь]|июл[яь]|августа?|сентябр[яь]|октябр[яь]|ноябр[яь]|декабр[яь])/i,
           monthsShortStrictRegex:
             /^(янв\.|февр?\.|мар[т.]|апр\.|ма[яй]|июн[ья.]|июл[ья.]|авг\.|сент?\.|окт\.|нояб?\.|дек\.)/i,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -38279,7 +38279,7 @@
           ),
           weekdaysShort: "Dum_Lun_Mar_Mie_Joi_Vin_Sâm".split("_"),
           weekdaysMin: "Du_Lu_Ma_Mi_Jo_Vi_Sâ".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -38333,7 +38333,7 @@
           weekdaysShort: "Dom_Seg_Ter_Qua_Qui_Sex_Sáb".split("_"),
           weekdaysMin: "Do_2ª_3ª_4ª_5ª_6ª_Sá".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -38392,7 +38392,7 @@
           weekdaysShort: "Dom_Seg_Ter_Qua_Qui_Sex_Sáb".split("_"),
           weekdaysMin: "Do_2ª_3ª_4ª_5ª_6ª_Sá".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -38486,7 +38486,7 @@
             ),
           weekdaysShort: "ndz_pon_wt_śr_czw_pt_sob".split("_"),
           weekdaysMin: "Nd_Pn_Wt_Śr_Cz_Pt_So".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -38588,7 +38588,7 @@
             "ਐਤਵਾਰ_ਸੋਮਵਾਰ_ਮੰਗਲਵਾਰ_ਬੁਧਵਾਰ_ਵੀਰਵਾਰ_ਸ਼ੁੱਕਰਵਾਰ_ਸ਼ਨੀਚਰਵਾਰ".split("_"),
           weekdaysShort: "ਐਤ_ਸੋਮ_ਮੰਗਲ_ਬੁਧ_ਵੀਰ_ਸ਼ੁਕਰ_ਸ਼ਨੀ".split("_"),
           weekdaysMin: "ਐਤ_ਸੋਮ_ਮੰਗਲ_ਬੁਧ_ਵੀਰ_ਸ਼ੁਕਰ_ਸ਼ਨੀ".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm ਵਜੇ",
             LTS: "A h:mm:ss ਵਜੇ",
             L: "DD/MM/YYYY",
@@ -38680,7 +38680,7 @@
           ),
           weekdaysShort: "sun_mån_tys_ons_tor_fre_lau".split("_"),
           weekdaysMin: "su_må_ty_on_to_fr_lø".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -38766,7 +38766,7 @@
           weekdaysShort: "zo._ma._di._wo._do._vr._za.".split("_"),
           weekdaysMin: "zo_ma_di_wo_do_vr_za".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -38854,7 +38854,7 @@
           weekdaysShort: "zo._ma._di._wo._do._vr._za.".split("_"),
           weekdaysMin: "zo_ma_di_wo_do_vr_za".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD-MM-YYYY",
@@ -38936,7 +38936,7 @@
           weekdaysShort: "आइत._सोम._मङ्गल._बुध._बिहि._शुक्र._शनि.".split("_"),
           weekdaysMin: "आ._सो._मं._बु._बि._शु._श.".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "Aको h:mm बजे",
             LTS: "Aको h:mm:ss बजे",
             L: "DD/MM/YYYY",
@@ -39031,7 +39031,7 @@
           weekdaysShort: "sø._ma._ti._on._to._fr._lø.".split("_"),
           weekdaysMin: "sø_ma_ti_on_to_fr_lø".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -39108,7 +39108,7 @@
             "တနင်္ဂနွေ_တနင်္လာ_အင်္ဂါ_ဗုဒ္ဓဟူး_ကြာသပတေး_သောကြာ_စနေ".split("_"),
           weekdaysShort: "နွေ_လာ_ဂါ_ဟူး_ကြာ_သော_နေ".split("_"),
           weekdaysMin: "နွေ_လာ_ဂါ_ဟူး_ကြာ_သော_နေ".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -39171,7 +39171,7 @@
             ),
           weekdaysShort: "Ħad_Tne_Tli_Erb_Ħam_Ġim_Sib".split("_"),
           weekdaysMin: "Ħa_Tn_Tl_Er_Ħa_Ġi_Si".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -39223,7 +39223,7 @@
           weekdays: "Ahad_Isnin_Selasa_Rabu_Khamis_Jumaat_Sabtu".split("_"),
           weekdaysShort: "Ahd_Isn_Sel_Rab_Kha_Jum_Sab".split("_"),
           weekdaysMin: "Ah_Is_Sl_Rb_Km_Jm_Sb".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH.mm",
             LTS: "HH.mm.ss",
             L: "DD/MM/YYYY",
@@ -39297,7 +39297,7 @@
           weekdays: "Ahad_Isnin_Selasa_Rabu_Khamis_Jumaat_Sabtu".split("_"),
           weekdaysShort: "Ahd_Isn_Sel_Rab_Kha_Jum_Sab".split("_"),
           weekdaysMin: "Ah_Is_Sl_Rb_Km_Jm_Sb".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH.mm",
             LTS: "HH.mm.ss",
             L: "DD/MM/YYYY",
@@ -39478,7 +39478,7 @@
             "रविवार_सोमवार_मंगळवार_बुधवार_गुरूवार_शुक्रवार_शनिवार".split("_"),
           weekdaysShort: "रवि_सोम_मंगळ_बुध_गुरू_शुक्र_शनि".split("_"),
           weekdaysMin: "र_सो_मं_बु_गु_शु_श".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm वाजता",
             LTS: "A h:mm:ss वाजता",
             L: "DD/MM/YYYY",
@@ -39573,7 +39573,7 @@
             ),
           weekdaysShort: "ഞായർ_തിങ്കൾ_ചൊവ്വ_ബുധൻ_വ്യാഴം_വെള്ളി_ശനി".split("_"),
           weekdaysMin: "ഞാ_തി_ചൊ_ബു_വ്യാ_വെ_ശ".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm -നു",
             LTS: "A h:mm:ss -നു",
             L: "DD/MM/YYYY",
@@ -39645,7 +39645,7 @@
             "недела_понеделник_вторник_среда_четврток_петок_сабота".split("_"),
           weekdaysShort: "нед_пон_вто_сре_чет_пет_саб".split("_"),
           weekdaysMin: "нe_пo_вт_ср_че_пе_сa".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "D.MM.YYYY",
@@ -39732,7 +39732,7 @@
           ),
           weekdaysShort: "Ta_Ma_Tū_We_Tāi_Pa_Hā".split("_"),
           weekdaysMin: "Ta_Ma_Tū_We_Tāi_Pa_Hā".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -39813,7 +39813,7 @@
           weekdaysShort: "ned._pon._uto._sri._čet._pet._sub.".split("_"),
           weekdaysMin: "ne_po_ut_sr_če_pe_su".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -39921,7 +39921,7 @@
           weekdaysShort: "Sv_P_O_T_C_Pk_S".split("_"),
           weekdaysMin: "Sv_P_O_T_C_Pk_S".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY.",
@@ -40026,7 +40026,7 @@
           weekdaysShort: "Sek_Pir_Ant_Tre_Ket_Pen_Šeš".split("_"),
           weekdaysMin: "S_P_A_T_K_Pn_Š".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "YYYY-MM-DD",
@@ -40092,7 +40092,7 @@
           weekdaysShort: "ທິດ_ຈັນ_ອັງຄານ_ພຸດ_ພະຫັດ_ສຸກ_ເສົາ".split("_"),
           weekdaysMin: "ທ_ຈ_ອຄ_ພ_ພຫ_ສກ_ສ".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -40183,7 +40183,7 @@
           weekdaysShort: "So._Mé._Dë._Më._Do._Fr._Sa.".split("_"),
           weekdaysMin: "So_Mé_Dë_Më_Do_Fr_Sa".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm [Auer]",
             LTS: "H:mm:ss [Auer]",
             L: "DD.MM.YYYY",
@@ -40273,7 +40273,7 @@
             ),
           weekdaysShort: "Жек_Дүй_Шей_Шар_Бей_Жум_Ише".split("_"),
           weekdaysMin: "Жк_Дй_Шй_Шр_Бй_Жм_Иш".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -40329,7 +40329,7 @@
           ),
           weekdaysShort: "일_월_화_수_목_금_토".split("_"),
           weekdaysMin: "일_월_화_수_목_금_토".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm",
             LTS: "A h:mm:ss",
             L: "YYYY.MM.DD.",
@@ -40434,7 +40434,7 @@
             ),
           weekdaysShort: "ಭಾನು_ಸೋಮ_ಮಂಗಳ_ಬುಧ_ಗುರು_ಶುಕ್ರ_ಶನಿ".split("_"),
           weekdaysMin: "ಭಾ_ಸೋ_ಮಂ_ಬು_ಗು_ಶು_ಶ".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm",
             LTS: "A h:mm:ss",
             L: "DD/MM/YYYY",
@@ -40533,7 +40533,7 @@
           weekdaysMin: "អាទិត្យ_ច័ន្ទ_អង្គារ_ពុធ_ព្រហស្បតិ៍_សុក្រ_សៅរ៍".split(
             "_",
           ),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -40608,7 +40608,7 @@
             ),
           weekdaysShort: "жек_дүй_сей_сәр_бей_жұм_сен".split("_"),
           weekdaysMin: "жк_дй_сй_ср_бй_жм_сн".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -40680,7 +40680,7 @@
           },
           weekdaysShort: "კვი_ორშ_სამ_ოთხ_ხუთ_პარ_შაბ".split("_"),
           weekdaysMin: "კვ_ორ_სა_ოთ_ხუ_პა_შა".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "h:mm A",
             LTS: "h:mm:ss A",
             L: "DD/MM/YYYY",
@@ -40750,7 +40750,7 @@
           weekdays: "Minggu_Senen_Seloso_Rebu_Kemis_Jemuwah_Septu".split("_"),
           weekdaysShort: "Min_Sen_Sel_Reb_Kem_Jem_Sep".split("_"),
           weekdaysMin: "Mg_Sn_Sl_Rb_Km_Jm_Sp".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH.mm",
             LTS: "HH.mm.ss",
             L: "DD/MM/YYYY",
@@ -40824,7 +40824,7 @@
           ),
           weekdaysShort: "日_月_火_水_木_金_土".split("_"),
           weekdaysMin: "日_月_火_水_木_金_土".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "YYYY/MM/DD",
@@ -40898,7 +40898,7 @@
             ),
           weekdaysShort: "dom_lun_mar_mer_gio_ven_sab".split("_"),
           weekdaysMin: "do_lu_ma_me_gi_ve_sa".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -41014,7 +41014,7 @@
             ),
           weekdaysShort: "sun_mán_þri_mið_fim_fös_lau".split("_"),
           weekdaysMin: "Su_Má_Þr_Mi_Fi_Fö_La".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -41066,7 +41066,7 @@
           weekdays: "Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu".split("_"),
           weekdaysShort: "Min_Sen_Sel_Rab_Kam_Jum_Sab".split("_"),
           weekdaysMin: "Mg_Sn_Sl_Rb_Km_Jm_Sb".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH.mm",
             LTS: "HH.mm.ss",
             L: "DD/MM/YYYY",
@@ -41149,7 +41149,7 @@
             ),
           weekdaysShort: "կրկ_երկ_երք_չրք_հնգ_ուրբ_շբթ".split("_"),
           weekdaysMin: "կրկ_երկ_երք_չրք_հնգ_ուրբ_շբթ".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -41266,7 +41266,7 @@
           ),
           weekdaysShort: "vas_hét_kedd_sze_csüt_pén_szo".split("_"),
           weekdaysMin: "v_h_k_sze_cs_p_szo".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "YYYY.MM.DD.",
@@ -41387,7 +41387,7 @@
           weekdaysShort: "ned._pon._uto._sri._čet._pet._sub.".split("_"),
           weekdaysMin: "ne_po_ut_sr_če_pe_su".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -41493,7 +41493,7 @@
             "रविवार_सोमवार_मंगलवार_बुधवार_गुरूवार_शुक्रवार_शनिवार".split("_"),
           weekdaysShort: "रवि_सोम_मंगल_बुध_गुरू_शुक्र_शनि".split("_"),
           weekdaysMin: "र_सो_मं_बु_गु_शु_श".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm बजे",
             LTS: "A h:mm:ss बजे",
             L: "DD/MM/YYYY",
@@ -41584,7 +41584,7 @@
           weekdays: "ראשון_שני_שלישי_רביעי_חמישי_שישי_שבת".split("_"),
           weekdaysShort: "א׳_ב׳_ג׳_ד׳_ה׳_ו׳_ש׳".split("_"),
           weekdaysMin: "א_ב_ג_ד_ה_ו_ש".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -41696,7 +41696,7 @@
             "રવિવાર_સોમવાર_મંગળવાર_બુધ્વાર_ગુરુવાર_શુક્રવાર_શનિવાર".split("_"),
           weekdaysShort: "રવિ_સોમ_મંગળ_બુધ્_ગુરુ_શુક્ર_શનિ".split("_"),
           weekdaysMin: "ર_સો_મં_બુ_ગુ_શુ_શ".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm વાગ્યે",
             LTS: "A h:mm:ss વાગ્યે",
             L: "DD/MM/YYYY",
@@ -41808,7 +41808,7 @@
           weekdaysShort: "Ait._Som._Mon._Bud._Bre._Suk._Son.".split("_"),
           weekdaysMin: "Ai_Sm_Mo_Bu_Br_Su_Sn".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm [vazta]",
             LTS: "A h:mm:ss [vazta]",
             L: "DD-MM-YYYY",
@@ -41909,7 +41909,7 @@
           weekdaysShort: "dom._lun._mar._mér._xov._ven._sáb.".split("_"),
           weekdaysMin: "do_lu_ma_mé_xo_ve_sá".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD/MM/YYYY",
@@ -42005,7 +42005,7 @@
           ],
           weekdaysShort: ["Did", "Dil", "Dim", "Dic", "Dia", "Dih", "Dis"],
           weekdaysMin: ["Dò", "Lu", "Mà", "Ci", "Ar", "Ha", "Sa"],
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -42068,7 +42068,7 @@
           weekdaysShort: "si._mo._ti._wo._to._fr._so.".split("_"),
           weekdaysMin: "Si_Mo_Ti_Wo_To_Fr_So".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD-MM-YYYY",
@@ -42127,7 +42127,7 @@
           weekdaysShort: "dim._lun._mar._mer._jeu._ven._sam.".split("_"),
           weekdaysMin: "di_lu_ma_me_je_ve_sa".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -42197,7 +42197,7 @@
           weekdaysShort: "dim._lun._mar._mer._jeu._ven._sam.".split("_"),
           weekdaysMin: "di_lu_ma_me_je_ve_sa".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "YYYY-MM-DD",
@@ -42266,7 +42266,7 @@
           weekdaysShort: "dim._lun._mar._mer._jeu._ven._sam.".split("_"),
           weekdaysMin: "di_lu_ma_me_je_ve_sa".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -42335,7 +42335,7 @@
             ),
           weekdaysShort: "sun_mán_týs_mik_hós_frí_ley".split("_"),
           weekdaysMin: "su_má_tý_mi_hó_fr_le".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -42446,7 +42446,7 @@
             ),
           weekdaysShort: "su_ma_ti_ke_to_pe_la".split("_"),
           weekdaysMin: "su_ma_ti_ke_to_pe_la".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH.mm",
             LTS: "HH.mm.ss",
             L: "DD.MM.YYYY",
@@ -42531,7 +42531,7 @@
             "یک‌شنبه_دوشنبه_سه‌شنبه_چهارشنبه_پنج‌شنبه_جمعه_شنبه".split("_"),
           weekdaysMin: "ی_د_س_چ_پ_ج_ش".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -42610,7 +42610,7 @@
           weekdaysShort: "ig._al._ar._az._og._ol._lr.".split("_"),
           weekdaysMin: "ig_al_ar_az_og_ol_lr".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "YYYY-MM-DD",
@@ -42686,7 +42686,7 @@
             ),
           weekdaysShort: "P_E_T_K_N_R_L".split("_"),
           weekdaysMin: "P_E_T_K_N_R_L".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -42746,7 +42746,7 @@
           weekdaysShort: "dom._lun._mar._mié._jue._vie._sáb.".split("_"),
           weekdaysMin: "do_lu_ma_mi_ju_vi_sá".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "h:mm A",
             LTS: "h:mm:ss A",
             L: "MM/DD/YYYY",
@@ -42844,7 +42844,7 @@
           weekdaysShort: "dom._lun._mar._mié._jue._vie._sáb.".split("_"),
           weekdaysMin: "do_lu_ma_mi_ju_vi_sá".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "h:mm A",
             LTS: "h:mm:ss A",
             L: "DD/MM/YYYY",
@@ -42942,7 +42942,7 @@
           weekdaysShort: "dom._lun._mar._mié._jue._vie._sáb.".split("_"),
           weekdaysMin: "do_lu_ma_mi_ju_vi_sá".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD/MM/YYYY",
@@ -43010,7 +43010,7 @@
           ),
           weekdaysShort: "dim_lun_mard_merk_ĵaŭ_ven_sab".split("_"),
           weekdaysMin: "di_lu_ma_me_ĵa_ve_sa".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "YYYY-MM-DD",
@@ -43072,7 +43072,7 @@
             ),
           weekdaysShort: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
           weekdaysMin: "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "h:mm A",
             LTS: "h:mm:ss A",
             L: "DD/MM/YYYY",
@@ -43140,7 +43140,7 @@
             ),
           weekdaysShort: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
           weekdaysMin: "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -43206,7 +43206,7 @@
             ),
           weekdaysShort: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
           weekdaysMin: "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD-MM-YYYY",
@@ -43274,7 +43274,7 @@
             ),
           weekdaysShort: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
           weekdaysMin: "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -43342,7 +43342,7 @@
             ),
           weekdaysShort: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
           weekdaysMin: "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "h:mm A",
             LTS: "h:mm:ss A",
             L: "YYYY-MM-DD",
@@ -43409,7 +43409,7 @@
             ),
           weekdaysShort: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
           weekdaysMin: "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "h:mm A",
             LTS: "h:mm:ss A",
             L: "DD/MM/YYYY",
@@ -43493,7 +43493,7 @@
             return "μ" === (t + "").toLowerCase()[0];
           },
           meridiemParse: /[ΠΜ]\.?Μ?\.?/i,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "h:mm A",
             LTS: "h:mm:ss A",
             L: "DD/MM/YYYY",
@@ -43581,7 +43581,7 @@
           weekdays: n,
           weekdaysShort: n,
           weekdaysMin: "އާދި_ހޯމަ_އަން_ބުދަ_ބުރާ_ހުކު_ހޮނި".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "D/M/YYYY",
@@ -43663,7 +43663,7 @@
           weekdaysShort: "So_Mo_Di_Mi_Do_Fr_Sa".split("_"),
           weekdaysMin: "So_Mo_Di_Mi_Do_Fr_Sa".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -43734,7 +43734,7 @@
           weekdaysShort: "So._Mo._Di._Mi._Do._Fr._Sa.".split("_"),
           weekdaysMin: "So_Mo_Di_Mi_Do_Fr_Sa".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -43805,7 +43805,7 @@
           weekdaysShort: "So._Mo._Di._Mi._Do._Fr._Sa.".split("_"),
           weekdaysMin: "So_Mo_Di_Mi_Do_Fr_Sa".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -43859,7 +43859,7 @@
           ),
           weekdaysShort: "søn_man_tir_ons_tor_fre_lør".split("_"),
           weekdaysMin: "sø_ma_ti_on_to_fr_lø".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -43914,7 +43914,7 @@
           weekdaysShort: "Sul_Llun_Maw_Mer_Iau_Gwe_Sad".split("_"),
           weekdaysMin: "Su_Ll_Ma_Me_Ia_Gw_Sa".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -44004,7 +44004,7 @@
             ),
           weekdaysShort: "выр_тун_ытл_юн_кӗҫ_эрн_шӑм".split("_"),
           weekdaysMin: "вр_тн_ыт_юн_кҫ_эр_шм".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD-MM-YYYY",
@@ -44118,7 +44118,7 @@
           ),
           weekdaysShort: "ne_po_út_st_čt_pá_so".split("_"),
           weekdaysMin: "ne_po_út_st_čt_pá_so".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -44215,7 +44215,7 @@
           weekdaysShort: "dg._dl._dt._dc._dj._dv._ds.".split("_"),
           weekdaysMin: "dg_dl_dt_dc_dj_dv_ds".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD/MM/YYYY",
@@ -44348,7 +44348,7 @@
           weekdaysShort: "ned._pon._uto._sri._čet._pet._sub.".split("_"),
           weekdaysMin: "ne_po_ut_sr_če_pe_su".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "DD.MM.YYYY",
@@ -44444,7 +44444,7 @@
           weekdaysShort: "Sul_Lun_Meu_Mer_Yao_Gwe_Sad".split("_"),
           weekdaysMin: "Su_Lu_Me_Mer_Ya_Gw_Sa".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "h[e]mm A",
             LTS: "h[e]mm:ss A",
             L: "DD/MM/YYYY",
@@ -44544,7 +44544,7 @@
             "ཉི་མ་_ཟླ་བ་_མིག་དམར་_ལྷག་པ་_ཕུར་བུ_པ་སངས་_སྤེན་པ་".split("_"),
           weekdaysMin:
             "ཉི་མ་_ཟླ་བ་_མིག་དམར་_ལྷག་པ་_ཕུར་བུ_པ་སངས་_སྤེན་པ་".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm",
             LTS: "A h:mm:ss",
             L: "DD/MM/YYYY",
@@ -44652,7 +44652,7 @@
             ),
           weekdaysShort: "রবি_সোম_মঙ্গল_বুধ_বৃহস্পতি_শুক্র_শনি".split("_"),
           weekdaysMin: "রবি_সোম_মঙ্গ_বুধ_বৃহঃ_শুক্র_শনি".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "A h:mm সময়",
             LTS: "A h:mm:ss সময়",
             L: "DD/MM/YYYY",
@@ -44734,7 +44734,7 @@
           weekdays: "Kari_Ntɛnɛn_Tarata_Araba_Alamisa_Juma_Sibiri".split("_"),
           weekdaysShort: "Kar_Ntɛ_Tar_Ara_Ala_Jum_Sib".split("_"),
           weekdaysMin: "Ka_Nt_Ta_Ar_Al_Ju_Si".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -44785,7 +44785,7 @@
             "неделя_понеделник_вторник_сряда_четвъртък_петък_събота".split("_"),
           weekdaysShort: "нед_пон_вто_сря_чет_пет_съб".split("_"),
           weekdaysMin: "нд_пн_вт_ср_чт_пт_сб".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
             L: "D.MM.YYYY",
@@ -44913,7 +44913,7 @@
           },
           weekdaysShort: "нд_пн_ат_ср_чц_пт_сб".split("_"),
           weekdaysMin: "нд_пн_ат_ср_чц_пт_сб".split("_"),
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -45032,7 +45032,7 @@
           weekdaysShort: "Baz_BzE_ÇAx_Çər_CAx_Cüm_Şən".split("_"),
           weekdaysMin: "Bz_BE_ÇA_Çə_CA_Cü_Şə".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD.MM.YYYY",
@@ -45107,7 +45107,7 @@
           weekdaysShort: "أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت".split("_"),
           weekdaysMin: "ح_ن_ث_ر_خ_ج_س".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -45185,7 +45185,7 @@
           weekdaysShort: "أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت".split("_"),
           weekdaysMin: "ح_ن_ث_ر_خ_ج_س".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -45260,7 +45260,7 @@
           weekdaysShort: "احد_اتنين_ثلاثاء_اربعاء_خميس_جمعة_سبت".split("_"),
           weekdaysMin: "ح_ن_ث_ر_خ_ج_س".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -45404,7 +45404,7 @@
           weekdaysShort: "أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت".split("_"),
           weekdaysMin: "ح_ن_ث_ر_خ_ج_س".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "D/‏M/‏YYYY",
@@ -45475,7 +45475,7 @@
           weekdaysShort: "احد_اتنين_ثلاثاء_اربعاء_خميس_جمعة_سبت".split("_"),
           weekdaysMin: "ح_ن_ث_ر_خ_ج_س".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -45529,7 +45529,7 @@
           weekdaysShort: "احد_اثنين_ثلاثاء_اربعاء_خميس_جمعة_سبت".split("_"),
           weekdaysMin: "أح_إث_ثلا_أر_خم_جم_سب".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -45685,7 +45685,7 @@
           weekdaysShort: "أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت".split("_"),
           weekdaysMin: "ح_ن_ث_ر_خ_ج_س".split("_"),
           weekdaysParseExact: !0,
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "D/‏M/‏YYYY",
@@ -45766,7 +45766,7 @@
           meridiem: function (t, e, n) {
             return t < 12 ? (n ? "vm" : "VM") : n ? "nm" : "NM";
           },
-          longDateFormat: {
+          long.DateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",
             L: "DD/MM/YYYY",
@@ -46739,7 +46739,7 @@
                 })(o, l),
                 (function (t, e, n, r) {
                   var i = s.append("g").attr("class", "today"),
-                    a = new Date();
+                    a = new .Date();
                   i.append("line")
                     .attr("x1", c(a) + t)
                     .attr("x2", c(a) + t)
@@ -47105,30 +47105,30 @@
               }),
               (this.verticalPos = 0));
           },
-          updateVal: function (t, e, n, r) {
+          up.DateVal: function (t, e, n, r) {
             void 0 === t[e] ? (t[e] = n) : (t[e] = r(n, t[e]));
           },
-          updateBounds: function (t, e, n, r) {
+          up.DateBounds: function (t, e, n, r) {
             var i = this,
               a = 0;
             function o(o) {
               return function (s) {
                 a++;
                 var u = i.sequenceItems.length - a + 1;
-                (i.updateVal(s, "starty", e - u * c.boxMargin, Math.min),
-                  i.updateVal(s, "stopy", r + u * c.boxMargin, Math.max),
-                  i.updateVal(l.data, "startx", t - u * c.boxMargin, Math.min),
-                  i.updateVal(l.data, "stopx", n + u * c.boxMargin, Math.max),
+                (i.up.DateVal(s, "starty", e - u * c.boxMargin, Math.min),
+                  i.up.DateVal(s, "stopy", r + u * c.boxMargin, Math.max),
+                  i.up.DateVal(l.data, "startx", t - u * c.boxMargin, Math.min),
+                  i.up.DateVal(l.data, "stopx", n + u * c.boxMargin, Math.max),
                   "activation" !== o &&
-                    (i.updateVal(s, "startx", t - u * c.boxMargin, Math.min),
-                    i.updateVal(s, "stopx", n + u * c.boxMargin, Math.max),
-                    i.updateVal(
+                    (i.up.DateVal(s, "startx", t - u * c.boxMargin, Math.min),
+                    i.up.DateVal(s, "stopx", n + u * c.boxMargin, Math.max),
+                    i.up.DateVal(
                       l.data,
                       "starty",
                       e - u * c.boxMargin,
                       Math.min,
                     ),
-                    i.updateVal(
+                    i.up.DateVal(
                       l.data,
                       "stopy",
                       r + u * c.boxMargin,
@@ -47144,11 +47144,11 @@
               a = Math.max(t, n),
               o = Math.min(e, r),
               s = Math.max(e, r);
-            (this.updateVal(l.data, "startx", i, Math.min),
-              this.updateVal(l.data, "starty", o, Math.min),
-              this.updateVal(l.data, "stopx", a, Math.max),
-              this.updateVal(l.data, "stopy", s, Math.max),
-              this.updateBounds(i, o, a, s));
+            (this.up.DateVal(l.data, "startx", i, Math.min),
+              this.up.DateVal(l.data, "starty", o, Math.min),
+              this.up.DateVal(l.data, "stopx", a, Math.max),
+              this.up.DateVal(l.data, "stopy", s, Math.max),
+              this.up.DateBounds(i, o, a, s));
           },
           newActivation: function (t, e) {
             var n = o.parser.yy.getActors()[t.from.actor],
@@ -47924,7 +47924,7 @@
               .data(e.edges(), function (t) {
                 return o.default.edgeToId(t);
               })
-              .classed("update", !0);
+              .classed("up.Date", !0);
             return (
               (function (t, e) {
                 var n = s
@@ -47985,7 +47985,7 @@
                   o.default.applyClass(
                     n,
                     i.class,
-                    (n.classed("update") ? "update " : "") + "edgePath",
+                    (n.classed("up.Date") ? "up.Date " : "") + "edgePath",
                   ));
               }),
               s.selectAll("path.path").each(function (t) {
@@ -48049,7 +48049,7 @@
               .data(e.edges(), function (t) {
                 return o.default.edgeToId(t);
               })
-              .classed("update", !0);
+              .classed("up.Date", !0);
             return (
               n.selectAll("*").remove(),
               n
@@ -48251,7 +48251,7 @@
                 .data(s, function (t) {
                   return t;
                 })
-                .classed("update", !0);
+                .classed("up.Date", !0);
             return (
               u.selectAll("*").remove(),
               u.enter().append("g").attr("class", "node").style("opacity", 0),
@@ -48261,7 +48261,7 @@
                 o.default.applyClass(
                   u,
                   s.class,
-                  (u.classed("update") ? "update " : "") + "node",
+                  (u.classed("up.Date") ? "up.Date " : "") + "node",
                 );
                 var c = u.append("g").attr("class", "label"),
                   l = (0, a.default)(c, s),
@@ -48310,7 +48310,7 @@
             a = (r = n(0)) && r.__esModule ? r : { default: r };
           e.default = function (t, e) {
             var n = t.filter(function () {
-              return !i.select(this).classed("update");
+              return !i.select(this).classed("up.Date");
             });
             function r(t) {
               var n = e.node(t);
@@ -48362,7 +48362,7 @@
             }
             (t
               .filter(function () {
-                return !r.select(this).classed("update");
+                return !r.select(this).classed("up.Date");
               })
               .attr("transform", n),
               a.default
@@ -48391,7 +48391,7 @@
             }
             (t
               .filter(function () {
-                return !i.select(this).classed("update");
+                return !i.select(this).classed("up.Date");
               })
               .attr("transform", n),
               a.default
@@ -49777,7 +49777,7 @@
                       Object.assign(D.sequence, D.sequenceDiagram),
                     ),
                     console.error(
-                      "`mermaid config.sequenceDiagram` has been renamed to `config.sequence`. Please update your mermaid config.",
+                      "`mermaid config.sequenceDiagram` has been renamed to `config.sequence`. Please up.Date your mermaid config.",
                     ))
                   : d.default.setConf(D.sequence),
                 d.default.draw(e, t));
@@ -53928,7 +53928,7 @@
                 )
                   return "continue";
                 a.setAttribute("data-processed", !0);
-                var s = "mermaid-" + Date.now();
+                var s = "mermaid-" + .Date.now();
                 ((o = a.innerHTML),
                   (o = r.default.decode(o).trim().replace(/<br>/gi, "<br/>")),
                   i.default.render(

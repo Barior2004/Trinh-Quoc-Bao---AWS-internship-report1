@@ -4,7 +4,7 @@
 // Improvements by German M. Bravo (Kronuz) and Ruud Kamphuis (ruudk)
 // Improvements by Leonardo C. Daronco (daronco)
 // Created: 02/14/2011
-// Date: 07/20/2015
+// .Date: 07/20/2015
 // Website: http://stickyjs.com/
 // Description: Makes an element on the page stick on the screen as you scroll
 //              It will only set the 'top' and 'position' of your element, you
@@ -51,7 +51,7 @@
           elementTop = s.stickyWrapper.offset().top,
           etse = elementTop - s.topSpacing - extra;
 
-        //update height in case of dynamic content
+        //up.Date height in case of dynamic content
         s.stickyWrapper.css("height", s.stickyElement.outerHeight());
 
         if (scrollTop <= etse) {
@@ -102,7 +102,7 @@
               s.stickyElement.trigger("sticky-start", [s]);
             } else {
               // sticky is started but it have to be repositioned
-              s.stickyElement.trigger("sticky-update", [s]);
+              s.stickyElement.trigger("sticky-up.Date", [s]);
             }
 
             if (
@@ -263,7 +263,7 @@
           }
         }
       },
-      update: scroller,
+      up.Date: scroller,
       unstick: function (options) {
         return this.each(function () {
           var that = this;

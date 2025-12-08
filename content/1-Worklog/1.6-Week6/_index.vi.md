@@ -1,58 +1,34 @@
 ---
 title: "Worklog Tuần 6"
-date: "`r Sys.Date()`"
+.Date: "`r Sys..Date()`"
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu khái niệm cơ bản về Amazon RDS, các loại database engine, backup, Multi-AZ và read replica.
+* Hiểu Amazon Aurora, kiến trúc, lợi ích và khác biệt so với RDS.
+* Nắm kiến thức nền tảng về Amazon Redshift dùng cho phân tích dữ liệu.
+* Tìm hiểu Amazon ElastiCache (Redis/Memcached) và lý do caching cải thiện hiệu năng.
+* Thực hành các thao tác cơ bản với từng dịch vụ.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Tìm hiểu Amazon RDS. <br> - Hiểu MySQL, PostgreSQL, MariaDB. <br> - Nắm backup, Multi-AZ và read replica.                                                                                                   | 12/10/2025 | 13/10/2025      |
+| 3   | - Thực hành với RDS: <br>&emsp; + Tạo một DB instance. <br>&emsp; + Kết nối bằng DBeaver. <br>&emsp; + Thử snapshot backup & restore.                                             | 13/10/2025 | 14/10/2025      | <https://000005.awsstudygroup.com/> |
+| 4   | - Tìm hiểu Amazon Aurora: <br>&emsp; + Kiến trúc Aurora vs RDS. <br>&emsp; + Khả năng mở rộng & High Availability. <br>&emsp; + Writer/Reader endpoints. | 14/10/2025 | 15/10/2025      | <https://000005.awsstudygroup.com/> |
+| 5   | - Tìm hiểu Amazon Redshift: <br>&emsp; + Khái niệm data warehouse. <br>&emsp; + Cluster, node và cách chạy query. <br>&emsp; + Các tình huống sử dụng phân tích dữ liệu.                            | 15/10/2025 | 16/10/2025      | <https://000005.awsstudygroup.com/> |
+| 6   | - Tìm hiểu ElastiCache <br>&emsp; + Bộ nhớ đệm là gì và tại sao nó cải thiện hiệu suất. <br>&emsp; + Redis vs Memcached khác nhau thế nào. <br>&emsp; + Tạo thử một Redis cluster đơn giản. volume                                                                                     | 16/10/2025 | 17/10/2025      | <https://000005.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Nắm cơ bản về RDS và tự tạo được một DB instance.
+* Hiểu kiến trúc Aurora và cách Aurora đạt hiệu năng cao.
+* Có kiến thức nền về Redshift cho phân tích dữ liệu.
+* Hiểu caching và thực hành tạo một cluster Redis bằng ElastiCache.
 

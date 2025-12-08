@@ -1,6 +1,6 @@
 +++
 title = "{{ replace .Name "-" " " | title }}"
-date = {{ .Date }}
+.Date = {{ ..Date }}
 weight = 5
 chapter = true
 pre = "<b>X. </b>"
