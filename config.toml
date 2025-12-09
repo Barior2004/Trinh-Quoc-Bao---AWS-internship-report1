@@ -47,3 +47,13 @@ weight = 20
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# Bỏ qua xử lý các file JS bị lỗi
+[mediaTypes]
+  [mediaTypes."application/javascript"]
+    suffixes = ["js"]
+
+[outputFormats]
+  [outputFormats.js]
+    mediaType = "application/javascript"
+    isPlainText = true
